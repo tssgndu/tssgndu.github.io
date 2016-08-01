@@ -1,0 +1,129 @@
+/* ==========================================================================
+   Rosy Brown Color styles
+========================================================================== */
+ 
+.navbar-nav > li > a.current {
+    color: #8B6969;
+}
+.navbar-nav > li > a.current {
+    color: #8B6969;
+}
+.top-nav-collapse .navbar-nav > li > a.current {
+    color: #8B6969;
+}
+.top-nav-collapse .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:hover, .top-nav-collapse .navbar-nav > li > a.current:focus {
+    color: #8B6969;
+}
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
+    color: #8B6969;
+}
+.flipper h1 {
+    color: #8B6969;
+}
+.ban1_txt h3 {
+  color: #8B6969;
+}
+.header .carousel-indicators li {
+    border: 1px solid #8B6969;
+}
+.carousel-control .glyphicon {
+  color: #8B6969;
+}
+.btn {
+	background: #8B6969;
+}
+.ban1_txt .btn-cus_1:hover {
+    background: #8B6969!important;
+    border: 1px solid #8B6969;
+}
+.preview-2 .nivo-directionNav a.nivo-prevNav::before {
+    background: #8B6969;
+}
+.preview-2 .nivo-directionNav a.nivo-nextNav::before {
+    background: #8B6969;
+}
+.slider-area .big-title span.title-builder {
+    color: #8B6969;
+}
+.btn-success:focus, .btn-success.active, .btn-success:active, .open > .dropdown-toggle.btn-success {
+    color: #fff;
+    background-color:#8B6969;
+    border-color: 1px solid #8B6969;
+}
+
+
+
+.about-ssection .row .about-item:hover .icon-fea::before {
+    color: #8B6969;
+}
+.about-ssection .row .about-item:hover .fea-left {
+    color: #8B6969;
+}
+.feat-learn:hover {
+    color: #8B6969;
+}
+.section-header:hover.section-header h2{
+    border-left: 4px solid #8B6969;
+}
+.section-header h2 small {
+  color: #8B6969;
+}
+
+
+
+.otherDesc ul li:hover .ico {
+    border: 1px solid #8B6969;
+    color: #8B6969;
+}
+
+
+.project-filter ul li.active {
+    color: #8B6969;
+    border-bottom: 2px solid #8B6969;
+}
+.project-filter ul li:hover {
+  color: #8B6969;
+}
+.project_menu .hvr-underline-from-center::before {
+    background: #8B6969;
+}
+.mask2 p {
+    color: #8B6969;
+}
+.mask2 i {
+    color: #8B6969;
+}
+
+
+.member:hover .info {
+    background: #8B6969;
+}
+
+
+
+.clientCont a {
+    background: #8B6969;
+}
+.testimonial-box span {
+    color: #8B6969;
+}
+.testimonial-box p::before {
+  color: #8B6969;
+}
+.pricing-section .owl-theme .owl-controls .owl-page.active span {
+    background: #8B6969;
+}
+
+
+.date-sty {
+    color: #8B6969;
+}
+
+
+.contact-form #contact-form #submit-contact, .contact-form #comment-form #submit-contact, .comment-form #contact-form #submit-contact, .comment-form #comment-form #submit-contact {
+	background: #8B6969;
+}
+
+
+
+ 

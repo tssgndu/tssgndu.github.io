@@ -1,0 +1,129 @@
+/* ==========================================================================
+   Hazel Wood  Color styles
+========================================================================== */
+
+.navbar-nav > li > a.current {
+    color: #C9BB8E;
+}
+.navbar-nav > li > a.current {
+    color: #C9BB8E;
+}
+.top-nav-collapse .navbar-nav > li > a.current {
+    color: #C9BB8E;
+}
+.top-nav-collapse .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:hover, .top-nav-collapse .navbar-nav > li > a.current:focus {
+    color: #C9BB8E;
+}
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
+    color: #C9BB8E;
+}
+.flipper h1 {
+    color: #C9BB8E;
+}
+.ban1_txt h3 {
+  color: #C9BB8E;
+}
+.header .carousel-indicators li {
+    border: 1px solid #C9BB8E;
+}
+.carousel-control .glyphicon {
+  color: #C9BB8E;
+}
+.btn {
+	background: #C9BB8E;
+}
+.ban1_txt .btn-cus_1:hover {
+    background: #C9BB8E!important;
+    border: 1px solid #C9BB8E;
+}
+.preview-2 .nivo-directionNav a.nivo-prevNav::before {
+    background: #C9BB8E;
+}
+.preview-2 .nivo-directionNav a.nivo-nextNav::before {
+    background: #C9BB8E;
+}
+.slider-area .big-title span.title-builder {
+    color: #C9BB8E;
+}
+.btn-success:focus, .btn-success.active, .btn-success:active, .open > .dropdown-toggle.btn-success {
+    color: #fff;
+    background-color:#C9BB8E;
+    border-color: 1px solid #C9BB8E;
+}
+
+
+
+.about-ssection .row .about-item:hover .icon-fea::before {
+    color: #C9BB8E;
+}
+.about-ssection .row .about-item:hover .fea-left {
+    color: #C9BB8E;
+}
+.feat-learn:hover {
+    color: #C9BB8E;
+}
+.section-header:hover.section-header h2{
+    border-left: 4px solid #C9BB8E;
+}
+.section-header h2 small {
+  color: #C9BB8E;
+}
+
+
+
+.otherDesc ul li:hover .ico {
+    border: 1px solid #C9BB8E;
+    color: #C9BB8E;
+}
+
+
+.project-filter ul li.active {
+    color: #C9BB8E;
+    border-bottom: 2px solid #C9BB8E;
+}
+.project-filter ul li:hover {
+  color: #C9BB8E;
+}
+.project_menu .hvr-underline-from-center::before {
+    background: #C9BB8E;
+}
+.mask2 p {
+    color: #C9BB8E;
+}
+.mask2 i {
+    color: #C9BB8E;
+}
+
+
+.member:hover .info {
+    background: #C9BB8E;
+}
+
+
+
+.clientCont a {
+    background: #C9BB8E;
+}
+.testimonial-box span {
+    color: #C9BB8E;
+}
+.testimonial-box p::before {
+  color: #C9BB8E;
+}
+.pricing-section .owl-theme .owl-controls .owl-page.active span {
+    background: #C9BB8E;
+}
+
+
+.date-sty {
+    color: #C9BB8E;
+}
+
+
+.contact-form #contact-form #submit-contact, .contact-form #comment-form #submit-contact, .comment-form #contact-form #submit-contact, .comment-form #comment-form #submit-contact {
+	background: #C9BB8E;
+}
+
+
+
+ 

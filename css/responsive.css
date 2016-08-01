@@ -1,0 +1,669 @@
+/*          Responsive styles
+================================================== */
+
+/*                     Tablet Landscape
+=======================================================================================*/
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+
+/*----------------------------
+  2. Header Section
+------------------------------*/
+.slider-area .small-content{
+	padding: 0px;
+}
+.slider-area .button {
+    top: 67%;
+}
+/*----------------------------
+  5. Achieve Section 
+------------------------------*/
+.section-header h2 small {
+    letter-spacing: 5px;
+}
+.achieve-section .section-header {
+    margin-left: 10px;
+    margin-bottom: 60px;
+}
+.achieve-section .section-header p {
+    width: 34%;
+}
+
+.otherFeatures .section-header {
+    width: 425px;
+}
+.otherShot img {
+    display: none;
+}
+/*----------------------------
+  6. Work Section 
+------------------------------*/
+.mask2 h4 {
+    margin-top: 22px;
+}
+.project-filter {
+    margin-top: 180px;
+}
+.project-filter ul li {
+    float: none;
+}
+/*----------------------------
+  8. Team Section 
+------------------------------*/
+.member .info {
+    width: 61%;
+}
+.social li {
+    margin-right:0px;
+}
+/*--------------------------------------
+  9. Pricing and Testimonial Section 
+----------------------------------------*/
+.clientCont {
+    padding-left: 371px;
+    margin-top: -32px;
+}
+.testimonial-box {
+    margin-top: 20px;
+}
+.cus-title {
+    text-align: center;
+}
+.testimonial-box .tes-degree {
+    color: #009F9C;
+}
+
+ 
+/*--------------------------------------
+  11. Contact Section 
+----------------------------------------*/
+.contact-section .section-header {
+    padding-bottom: 20px;
+    background: #fff;
+}
+.contact-section .section-header p {
+    width: 100%;
+}
+}	
+/*                      Tablet Portrait
+=======================================================================================*/
+@media (min-width: 768px) and (max-width: 991px) {
+
+/*----------------------------
+  2. Header Section
+------------------------------*/
+.navbar .navbar-nav {
+    letter-spacing: 0px;
+    margin-left: 12px;
+}
+.slider-area .small-content{
+	padding: 0px;
+}
+.slider-area .button {
+    top: 70%;
+}
+/*----------------------------
+  3. about Section
+------------------------------*/
+.about-ssection .section-header {
+    margin-bottom: 40px;
+}
+
+/*----------------------------
+  5. Achieve Section 
+------------------------------*/
+.achieve-section .section-header h2 small {
+    letter-spacing: 0px;
+}
+.achieve-section .section-header {
+    margin-left: 10px;
+    margin-bottom: 60px;
+}
+.achieve-section .section-header p {
+    width: 41%;
+}
+
+
+.otherShot img {
+    display: none;
+}
+/*----------------------------
+  6. Work Section 
+------------------------------*/
+.project-filter {
+    margin-top: 200px;
+}
+.project-filter ul li {
+    float: none;
+}
+.mask2 h4 {
+    margin-top: 10px;
+    font-size: 16px;
+}
+.mask2 p {
+	margin-top: -25px;
+}
+.mask2 i {
+    position: relative;
+    top: -8px;
+}
+
+.video-content {
+    margin: 120px auto auto;
+}
+.video-content h2 {
+    font-size: 25px;
+}
+.play-video {
+    margin-top: 31px;
+}
+
+/*----------------------------
+7. Get touch Section
+------------------------------*/
+.get-touch-button {
+    padding: 90px 39px;
+}
+.get-touch-section h3 {
+    letter-spacing: 1px;
+}
+/*----------------------------
+  8. Team Section 
+------------------------------*/
+.member .info {
+    width: 68%;
+}
+.member .info h6 {
+    letter-spacing: 0px;
+    font-size: 19px;
+}
+.social li {
+    margin-right:0px;
+}
+/*--------------------------------------
+  9. Pricing and Testimonial Section 
+----------------------------------------*/
+.clientCont {
+    padding-left: 268px;
+    margin-top: -32px;
+}
+.testimonial-box {
+    margin-top: -1px;
+}
+.cus-title {
+    text-align: center;
+}
+.testimonial-box .tes-degree {
+    color: #009F9C;
+}
+.testimonial-box img, .cus-title {
+    margin-top: 24px;
+}
+/*--------------------------------------
+  10. Blog Section 
+----------------------------------------*/
+ 
+.single-post-warper {
+    padding: 40px 39px;
+}
+/*--------------------------------------
+  11. Contact Section 
+----------------------------------------*/
+.contact-section .section-header {
+    padding-bottom: 20px;
+    background: #fff;
+}
+.contact-section .section-header p {
+    width: 100%;
+}
+/*--------------------------------------
+  13. Blog Page
+----------------------------------------*/
+.blog-area {
+    padding-right: 15px;
+}
+.blog-post-list .entry-meta span {
+    margin-left: 20px;
+}
+}
+/*                          Phone
+=======================================================================================*/
+@media only screen and (max-width: 767px){
+/*----------------------------
+  2. Header Section   
+------------------------------*/
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #fbf6f6;
+}
+.ban1_txt {
+    margin-top: 0px;
+}
+.ban1_txt h2 {
+    font-size: 38px;
+    line-height: 41px;
+    letter-spacing: 3px;
+    margin-top: 15px;
+}
+.ban1_txt p {
+    padding: 0px;
+	width:100%;
+}
+.ban1_txt a {
+    margin-top: 15px;
+}
+.navbar-header {
+    background: none;
+}
+.btn-cus_1 {
+    margin-right: 0px;
+}
+.slidernav .navbar {
+    padding: 0px 0px;
+}
+.slider-content {
+    display: none;
+}
+/*----------------------------
+  3. About Section
+------------------------------*/
+.about-ssection .section-header {
+    width: 94%;
+}
+.about-item {
+    margin-top: 30px;
+	padding: 30px 30px 30px;
+}
+.section-header h2 small {
+    letter-spacing: 6px;
+}
+.fea-left {
+    width: 198px;
+}
+
+
+/*----------------------------
+  5. Achieve Section 
+------------------------------*/
+.achieve-section .col-lg-3 .stat-count {
+    margin-top: -10px;
+}
+.achieve-section .col-lg-3.col-lg-3:hover h5 {
+    top: 20px;
+}
+.achieve-section .section-header {
+    margin-left: 9px;
+}
+.achieve-section .section-header p {
+    margin-bottom: 50px;
+}
+.feat-learn {
+    text-align: center;
+    display: block;
+}
+.feat-learn.hvr-float-shadow:hover::before {
+   opacity:0;
+}
+.otherShot img {
+    display: none;
+}
+/*----------------------------
+  6. Work Section 
+------------------------------*/
+.project-filter {
+    margin-top: 40px;
+}
+.project-filter ul li {
+    float: none;
+	margin-right: 14px;
+}
+.work-page .project-filter ul li {
+    float: none;
+    margin-right: 14px;
+}
+/*----------------------------------------------------
+    8. Video Section
+------------------------------------------------------*/
+.video-container a {
+    width: 100%;
+}
+.video-modal iframe {
+    width: 37%;
+}
+.video-image {
+    display: none;
+}
+.video-content {
+    margin: 110px auto auto;
+}
+.play-video {
+    margin-top: 21px;
+}
+#video {
+    padding: 20px 0;
+}
+/*----------------------------
+7. Get touch Section
+------------------------------*/
+.get-touch-section {
+    padding: 0px 0px;
+}
+.get-touch-section .col-lg-5{
+    text-align: right;
+}
+.get-touch-button {
+    padding: 65px 31px;
+    margin-top: -39px;
+}
+.get-touch-warper::before {
+    top: 87px;
+}
+.get-touch-button a {
+    padding: 11px 26px;
+}
+/*----------------------------
+  8. Team Section 
+------------------------------*/
+.team-section {
+    padding-bottom: 0px;
+
+}
+.team-section .section-header {
+    width: 100%;
+}
+.section-header h2 {
+    font-size: 28px;
+    line-height: 37px;
+}
+.member .info {
+    width: 69%;
+}
+.member {
+    padding: 0px 0px;
+    margin-bottom: 100px;
+}
+/*--------------------------------------
+  9. Pricing and Testimonial Section 
+----------------------------------------*/
+.clientCont {
+    padding-left: 176px;
+    margin-top: -31px;
+}
+.testimonial-box {
+    padding: 15px 22px;
+}
+.testimonial-box span {
+    font-size: 14px;
+    text-align: center;
+}
+.testimonial-box .tes-degree {
+    font-size: 11px;
+    color: #009F9C;
+}
+.cus-title {
+    text-align: center;
+}
+/*--------------------------------------
+  10. Blog Section 
+----------------------------------------*/
+.blog-section {
+    padding-bottom: 60px;
+}
+.blog-warp {
+    margin-top: 20px;
+}
+.blog-section .section-header {
+    width: 100%;
+}
+.single-post-warper {
+    padding: 40px 24px;
+}
+.blog-content a {
+    font-size: 16px;
+}
+.date-sty {
+    font-size: 24px;
+}
+.blog-section  .col-lg-6{
+    margin-bottom: 20px;
+}
+.single-post-warper {
+    left: 0px;
+}
+.single-post {
+    width: 100%;
+}
+.blog-thumb {
+    width: 100%;
+	 height: 100%;
+}
+.single-post {
+    padding: 15px 15px;
+}
+.single-post-warper {
+    padding: 40px 24px;
+}
+/*--------------------------------------
+  11. Contact Section 
+----------------------------------------*/
+.contact-section .section-header {
+    background: #fff;
+    padding-bottom: 20px;
+	border-left: 4px solid #f6eeee;
+}
+.contact-section .section-header h2 {
+    border-left: 4px solid transparent;
+}
+.contact-section .section-header.section-header:hover h2 {
+    border-left: 4px solid transparent !important;
+}
+.contact-section .section-header:hover {
+    border-left: 4px solid #009f9c;
+}
+.contact-section .section-header h2::before {
+    top: 119px;
+	left: 2px;
+}
+.contact-section .section-header p {
+    padding: 0px 19px;
+    width: 100%;
+}
+.contact-section .section-header h2 {
+    padding: 45px 19px;
+}
+.contact-section .inner-contact {
+    padding: 0px;
+}
+.contact-info .col-sm-4 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+/*--------------------------------------
+  12. Footer Section 
+----------------------------------------*/
+.footer-social-links ul {
+    margin-left: -28px;
+}
+.footer-section-1 .footer-social-links {
+    margin-top: 0px;
+    margin-bottom: 35px;
+}
+.scrollup {
+    margin-top: 35px;
+}
+.footer-section .text-right, .footer-section .text-left{
+	text-align: center;
+}
+
+/*--------------------------------------
+  13. Blog Page
+----------------------------------------*/
+.blog-area {
+    padding-right: 15px;
+	padding-top: 40px;
+}
+.blog-post-list .entry-meta span {
+    margin-left: 0px;
+}
+.blog-post-list .entry-content p {
+    top: -25px;
+}
+.single-post .entry-title, .blog-post-list .entry-title > a {
+    top: 14px !important;
+}
+.blog-post-list .entry-content a {
+    margin-top: -18px;
+}
+
+.input-group-btn {
+    left: 0px;
+}
+ 
+
+
+.blog-area .pager li {
+    padding: 0px 12px;
+}
+.author-data .author-img {
+    width: 70px;
+    height: 70px;
+}
+.author-data strong.author-title {
+    margin-left: 12px;
+}
+.author-data p {
+    margin-left: 82px;
+}
+.comments li .comment strong.commenter-title {
+    margin-left: 62px;
+}
+.comments li .comment span.comment-date {
+    margin-left: 62px;
+	margin-top: 4px;
+}
+.comments li .comment span.comment-reply {
+    right: 15px;
+    top: 62px;
+}
+.comments li .comment p {
+    margin-top: 49px;
+}
+/*----------------------------------------------------
+    16. Single Work page
+------------------------------------------------------*/
+.singlework-section .section-header {
+    width: 100%;
+}
+.portfolioitem img {
+    height: 100%;
+}
+.page-content .col-xs-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.portfolioitem {
+    padding-bottom:0px;
+}
+.itemPortfolioContent {
+    margin-top: 52px;
+}
+/*----------------------------------------------------
+  18. About Page
+------------------------------------------------------*/
+.about-page {
+    padding-bottom:0px;
+}
+.about-page .about-left {
+    padding-right:0px;
+}
+.about-page .about-left {
+    margin-top: 70px;
+}
+ }
+ 
+ /* Mobile Vertical Layout: 488px 
+=======================================================================================*/
+@media only screen and (min-width: 488px) and (max-width: 767px){
+/*----------------------------
+   2. Header Section    
+------------------------------*/
+.section-header {
+    width: 445px;
+}
+/*----------------------------
+    3. about Section    
+------------------------------*/
+.about-ssection .section-header {
+    width: 445px;
+}
+
+/*----------------------------
+  5. Achieve Section 
+------------------------------*/
+.achieve-section .section-header p {
+    margin-bottom: 84px;
+}
+.achieve-section .section-header::before {
+   top: 78px;
+}
+/*----------------------------
+  6. Work Section 
+------------------------------*/
+.mask2 h4 {
+    margin-top: 82px;
+}
+/*----------------------------------------------------
+    8. Video Section
+------------------------------------------------------*/
+.video-modal iframe {
+    width: 74%;
+}
+/*----------------------------
+7. Get touch Section
+------------------------------*/
+.get-touch-warper::before {
+    top: 49px;
+}
+.get-touch-button a {
+    float: right;
+}
+ 
+.get-touch-button {
+    margin-bottom: 77px;
+	padding: 26px 31px;
+}
+/*----------------------------
+  8. Team Section 
+------------------------------*/
+.team-section .section-header {
+    width: 445px;
+}
+ 
+
+/*--------------------------------------
+  10. Blog Section 
+----------------------------------------*/
+.blog-section .section-header {
+    width: 445px;
+}
+.single-post-warper {
+    padding: 40px 37px;
+}
+.date-sty {
+    font-size: 30px;
+}
+.blog-content a {
+    font-size: 19px;
+}
+/*--------------------------------------
+  11. Contact Section 
+----------------------------------------*/
+.contact-section .section-header {
+    width: 100%;
+}
+/*--------------------------------------
+  14. Single Blog Page
+----------------------------------------*/
+.comments li .comment span.comment-reply {
+    top: 15px;
+}
+
+ }
