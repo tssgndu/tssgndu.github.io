@@ -1069,6 +1069,8 @@ color: #fff;
 .work-item {
   position: relative;
   margin-top: 10px;
+  width: 250px;
+  height: 225px;
 }
 
 .item {
@@ -1106,7 +1108,7 @@ color: #fff;
   -ms-opacity: 1;
   -o-opacity: 1;
   opacity: 1;
-  height: 68%;
+  height: 60%;
   width: 100%;
 }
 
@@ -1177,6 +1179,7 @@ color: #fff;
 .mask2 i {
   font-size: 25px;
 }
+
 
 /*----------------------------------------------------
   8. Video Section 
@@ -1659,7 +1662,7 @@ color: #fff;
 }
 
 .pricing-box .hvr-bounce-to-left::before {
-  background: #333;
+  background: #fff;
 }
 
 .pricing-box .hvr-bounce-to-left:hover::before,
@@ -1883,7 +1886,9 @@ color: #fff;
   -o-transition: all 0.4s ease-out 0s;
   transition: all 0.4s ease-out 0s;
 }
-
+.logo{
+  background-color: #2EADAB;
+}
 .readmore:hover.readmore .arrow_right {
   -webkit-opacity: 1;
   -moz-opacity: 1;
@@ -1893,7 +1898,8 @@ color: #fff;
   left: 0px;
 }
 .blog-thumb_1:hover .single-post-left {
-  background: rgba(137, 134, 134, 0.5);
+  background: #2EADAB;
+  /*rgba(137, 134, 134, 0.5);*/
 }
 
 .blog-foot {
@@ -2280,7 +2286,7 @@ color: #fff;
      14. Blog Page
 ======================================*/
 header.blog-banner{
-    background:transparent url("../images/slider/blog1.jpg");
+    background:transparent url("../images/slider/slide2.jpg");
     color: #FFF;
 	background-attachment: fixed;
     box-sizing: border-box;
