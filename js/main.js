@@ -25,7 +25,7 @@ $(function() {
 ======================================= */
 	function count($this){
 	var current = parseInt($this.html(), 10);
-	current = current + 1; /* Where 50 is increment */	
+	current = current + 5;	
 	$this.html(++current);
 		if(current > $this.data('count')){
 			$this.html($this.data('count'));
@@ -88,7 +88,7 @@ $(window).scroll(function() {
     Pricing Section 
 =======================================*/
   $("#pricing").owlCarousel({
-    autoPlay: 6000, //Set AutoPlay to 3 seconds
+    autoPlay: 4000, //Set AutoPlay to 3 seconds
     items : 1,
 	loop:true,
 	margin:10,
