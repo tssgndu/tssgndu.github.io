@@ -4,7 +4,7 @@
 		//---------------------------------------------
 		//Nivo slider
 		//---------------------------------------------
-			 $('#ensign-nivoslider').nivoSlider({
+			 $('#slider').nivoSlider({
 				effect: 'slideInRight',
 				slices: 15,
 				boxCols: 8,
