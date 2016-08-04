@@ -2274,6 +2274,7 @@ color: #fff;
 
 .scrollup:hover {
   color: #a9abab;
+  cursor: pointer;
 }
 
 .scrollup span {

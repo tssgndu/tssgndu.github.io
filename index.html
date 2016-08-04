@@ -111,10 +111,10 @@
 				<img alt="TSS" src="images/logo.png" style="margin-top: -20px;">
 			</a>
         </div><!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse single-page-nav" id="bs-example-navbar-collapse-1" >
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
             <ul class="nav navbar-nav navbar-left" >
                 <li>
-                    <a href="#ensign-nivoslider" >Home</a>
+                    <a href="#slider" >Home</a>
                 </li>
                 <li>
                     <a href="#about">about</a>
@@ -135,10 +135,10 @@
 			<div class="pull-right header-right text-right">
                 <ul>
 					<li>
-						<a class="visible-lg" href="https://www.facebook.com/tssgndu"><i class="fa fa-facebook"></i></a>
+						<a class="visible-lg" targer="_blank" href="https://www.facebook.com/tssgndu"><i class="fa fa-facebook"></i></a>
 					</li>
 					<li>
-						<a class="visible-lg" href="https://www.twitter.com/gndutss"><i class="fa fa-twitter"></i></a>
+						<a class="visible-lg" targer="_blank" href="https://www.twitter.com/gndutss"><i class="fa fa-twitter"></i></a>
 					</li>
 				</ul>
             </div>
@@ -149,7 +149,7 @@
 <!-- slider -->
 <div class="slider-area">
 	<div class="bend niceties preview-2">
-		<div id="ensign-nivoslider" class="slides">	<!-- slider image-->
+		<div id="slider" class="slides">	<!-- slider image-->
 			<img src="images/slider/slide3.jpg" alt="image" title="#slider-direction-1"  />
 			<img src="images/slider/slide2.jpg" alt="image" title="#slider-direction-1"  />
 			<img src="images/slider/slide1.jpg" alt="image" title="#slider-direction-1"  />
@@ -656,7 +656,7 @@
                     <div class="img">
                         <img alt="team" class="img-responsive" src="images/team/6.jpg">
                         <div class="info">
-                            <h6>Dr.Hardeep</h6>
+                            <h6>Dr.Hardeep Singh </h6>
                             <p>President</p>
                             <ul class="social list-inline">
                                 <li>
@@ -678,7 +678,7 @@
                     <div class="img">
                         <img alt="team" class="img-responsive" src="images/team/1.jpg">
                         <div class="info">
-                            <h6>AmanHundal </h6>
+                            <h6>Aman Hundal </h6>
                             <p>Chief Convener</p>
                             <ul class="social list-inline">
                                 <li>
@@ -704,13 +704,13 @@
                             <p>Technical Supremo</p>
                             <ul class="social list-inline">
                                 <li>
-                                    <a href="#" title="Follow Me on Facebook"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://www.facebook.com/sukhsagarsinghbatra" title="Follow Me on Facebook"><i class="fa fa-facebook"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#" title="Follow Me on Twitter"><i class="fa fa-twitter"></i></a>
+                                    <a href="https://www.linkedin.com/in/sukhsagarsinghbatra" title="Follow Me on LinkedIn"><i class="fa fa-linkedin"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#" title="Follow Me on LinkedIn"><i class="fa fa-linkedin"></i></a>
+                                    <a href="https://www.instagram.com/thealtruisticturbanator" title="Follow Me on LinkedIn"><i class="fa fa-instagram"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -876,8 +876,7 @@
 <!--End Contact Section
 ==================================================--> 
 
-
-<!-- Start:Footer Section 
+<!-- Start : Footer Section
 ==================================================--> 
 <footer class="footer-section">
 	<div class="footer-section-1">
@@ -887,7 +886,7 @@
 					<div class="footer-social-links">
 						<ul>
 							<li class="hvr-push"><a targer="_blank" href="https://www.facebook.com/tssgndu" class="fa fa-facebook"></a></li>
-							<li class="hvr-push"><a href="https://www.twitter.com/gndutss" class="fa fa-twitter"></a></li>
+							<li class="hvr-push"><a targer="_blank" href="https://www.twitter.com/gndutss" class="fa fa-twitter"></a></li>
 							<!-- <li class="hvr-push"><a href="#" class="fa fa-linkedin"></a></li> -->
 						</ul>
 					</div>
@@ -901,10 +900,13 @@
 					</div>
 				</div>
 				<!-- col-md-4 -->
-			
+				<script>
+				function scropToTop(){
+					$('html, body').animate({ scrollTop: 0 }, 'fast');
+				}
+				</script>
 				<div class="col-md-4 col-sm-2 text-right wow fadeInDown" data-wow-duration=".5s" data-wow-delay=".2s">
-					<a target="_blank" href="" class="scrollup">
-						<span class="arrow_carrot-up"></span>
+					<a class="scrollup arrow_carrot-up" onclick="scropToTop()" >
 					</a>
 				</div>
 				<!-- col-md-4 -->

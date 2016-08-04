@@ -100,10 +100,10 @@
 				<img alt="logo" src="images/logo.png" style="margin-top: -20px;">
 			</a>
         </div><!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse single-page-nav" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-left">
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.html#home">Home</a>
                 </li>
                 <li>
                     <a href="index.html#about">about</a>
@@ -124,10 +124,10 @@
 			<div class="pull-right header-right text-right">
                 <ul>
 					<li>
-						<a class="visible-lg" href="https://www.facebook.com/tssgndu"><i class="fa fa-facebook"></i></a>
+						<a class="visible-lg" targer="_blank" href="https://www.facebook.com/tssgndu"><i class="fa fa-facebook"></i></a>
 					</li>
 					<li>
-						<a class="visible-lg" href="https://www.twitter.com/gndutss"><i class="fa fa-twitter"></i></a>
+						<a class="visible-lg" targer="_blank" href="https://www.twitter.com/gndutss"><i class="fa fa-twitter"></i></a>
 					</li>
 				</ul>
             </div>
@@ -240,7 +240,7 @@
 					<div class="footer-social-links">
 						<ul>
 							<li class="hvr-push"><a targer="_blank" href="https://www.facebook.com/tssgndu" class="fa fa-facebook"></a></li>
-							<li class="hvr-push"><a href="https://www.facebook.com/gndutss" class="fa fa-twitter"></a></li>
+							<li class="hvr-push"><a targer="_blank" href="https://www.twitter.com/gndutss" class="fa fa-twitter"></a></li>
 							<!-- <li class="hvr-push"><a href="#" class="fa fa-linkedin"></a></li> -->
 						</ul>
 					</div>
@@ -254,10 +254,13 @@
 					</div>
 				</div>
 				<!-- col-md-4 -->
-			
+				<script>
+				function scropToTop(){
+					$('html, body').animate({ scrollTop: 0 }, 'fast');
+				}
+				</script>
 				<div class="col-md-4 col-sm-2 text-right wow fadeInDown" data-wow-duration=".5s" data-wow-delay=".2s">
-					<a href="#events" class="scrollup">
-						<span class="arrow_carrot-up"></span>
+					<a class="scrollup arrow_carrot-up" onclick="scropToTop()" >
 					</a>
 				</div>
 				<!-- col-md-4 -->
