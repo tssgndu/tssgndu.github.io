@@ -68,7 +68,10 @@
 	<link rel="alternate stylesheet" type="text/css" href="css/colors/hazelwood.css" title="bookmark" media="all" /><!--hazelwood Color-->	
 	<link rel="alternate stylesheet" type="text/css" href="css/colors/gray.css" title="prefetch" media="all" /><!--gray Color-->	
 	<!-- END Template Color Demo Examples -->
-		
+
+	<!--magnific pop up-->
+	<link rel="stylesheet" href="css/magnific-popup/magnific-popup.css">
+	<!--magnific pop up ends-->
 </head>
 <body>
 
@@ -189,6 +192,7 @@
 							<div class="mask2">
 								<a><h4>Seminar on Ethical hacking</h4></a>
 								<a class="info"><p>April 18, 2016</p></a>
+								<a href="eventPopUpPages/sample1.html" class="info event-detail-popup"><p>More Info<p></a>
 							</div>	
 						</div>
 					</div>
@@ -198,6 +202,7 @@
 							<div class="mask2">
 								<a><h4>Workshop by Netmax</h4></a>
 								<a class="info"><p>April 8, 2016</p></a>
+								<a href="eventPopUpPages/sample2.html" class="info event-detail-popup"><p>More Info<p></a>
 							</div>	
 						</div>
 					</div>
@@ -207,6 +212,7 @@
 							<div class="mask2">
 								<a><h4>Donate Blood, Save Lives</h4></a>
 								<a class="info"><p>April 7, 2016</p></a>
+								<a href="eventPopUpPages/sample3.html" class="info event-detail-popup"><p>More Info<p></a>
 							</div>	
 						</div>
 					</div>
@@ -216,6 +222,7 @@
 							<div class="mask2">
 								<a><h4>Seminar by BSNL</h4></a>
 								<a class="info"><p>April 6, 2016</p></a>
+								<a href="eventPopUpPages/sample4.html" class="info event-detail-popup"><p>More Info<p></a>
 							</div>	
 						</div>
 					</div>
@@ -584,6 +591,15 @@
 <!-- Custom Scripts
 ========================================-->
 <script src="js/main.js"></script>
+
+<!--magnific-popup script-->
+<script src="js/magnific-popup/magnific-popup.js"></script>
+<!--magnific-popup intialisation-->
+<script>
+$(document).ready(function() {
+  $('.event-detail-popup').magnificPopup({type:'ajax'});
+});
+</script>
 
 </body>
 </html>
