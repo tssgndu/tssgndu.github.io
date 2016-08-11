@@ -56,7 +56,7 @@
     opacity: 1;
 }
 .popup-gallery img, .lightbox-gallery img, .image-popup-no-margins img, .image-popup-vertical-fit img {
-    cursor:url("../images/icon-zoom.png"), pointer;
+    cursor:url("icon-zoom.png"), pointer;
 }
 .portfolio-nav .mfp-close {
     position: inherit;
@@ -80,21 +80,21 @@
     cursor: progress; }
 
 .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close, .mfp-image-holder, .mfp-iframe-holder, .mfp-close-btn-in, .mfp-content {
-    cursor:url("../images/icon-zoom-out.png"), pointer;
+    cursor:url("icon-zoom-out.png"), pointer;
 }
 #popup-form {
     cursor:default;
 }
 .zoom-gallery img {
-    cursor:url("../images/icon-zoom2.png"), pointer;
+    cursor:url("icon-zoom2.png"), pointer;
 }
 zoom-in
 .mfp-zoom{
-    cursor:url("../images/icon-zoom.png"), pointer;
+    cursor:url("icon-zoom.png"), pointer;
 }
 
 .mfp-auto-cursor .mfp-content {
-    cursor:url("../images/icon-zoom-out.png"), pointer;
+    cursor:url("icon-zoom-out.png"), pointer;
 }
 .mfp-close, .mfp-arrow, .mfp-preloader, .mfp-counter {
     -webkit-user-select: none;
@@ -606,4 +606,11 @@ img.mfp-img {
 /* my addition*/
 .event-detail-popup > p{
     line-height: 10px;
+}
+
+.eventDescPage{
+  margin:auto;
+  width:100%;
+  height: 100%;
+  cursor:url("icon-zoom-out.png"),pointer;
 }
