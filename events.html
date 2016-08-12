@@ -68,7 +68,10 @@
 	<link rel="alternate stylesheet" type="text/css" href="css/colors/hazelwood.css" title="bookmark" media="all" /><!--hazelwood Color-->	
 	<link rel="alternate stylesheet" type="text/css" href="css/colors/gray.css" title="prefetch" media="all" /><!--gray Color-->	
 	<!-- END Template Color Demo Examples -->
-		
+
+	<!--magnific pop up-->
+	<link rel="stylesheet" href="css/magnific-popup/magnific-popup.css">
+	<!--magnific pop up ends-->
 </head>
 <body>
 
@@ -189,6 +192,9 @@
 							<div class="mask2">
 								<a><h4>Seminar on Ethical hacking</h4></a>
 								<a class="info"><p>April 18, 2016</p></a>
+								<div style="text-align: center;">
+									<a class="btn btn-chos hvr-bounce-to-left info event-detail-popup" style="background-color:#2EADAB; min-width:20%; " href="eventPopUpPages/event1.html" title="View Details"> View Details</a>
+								</div>
 							</div>	
 						</div>
 					</div>
@@ -198,6 +204,9 @@
 							<div class="mask2">
 								<a><h4>Workshop by Netmax</h4></a>
 								<a class="info"><p>April 8, 2016</p></a>
+								<div style="text-align: center;">
+									<a class="btn btn-chos hvr-bounce-to-left info event-detail-popup" style="background-color:#2EADAB; min-width:20%; " href="eventPopUpPages/event5.html" title="View Details"> View Details</a>
+								</div>
 							</div>	
 						</div>
 					</div>
@@ -207,6 +216,9 @@
 							<div class="mask2">
 								<a><h4>Donate Blood, Save Lives</h4></a>
 								<a class="info"><p>April 7, 2016</p></a>
+								<div style="text-align: center;">
+									<a class="btn btn-chos hvr-bounce-to-left info event-detail-popup" style="background-color:#2EADAB; min-width:20%; " href="eventPopUpPages/event8.html" title="View Details"> View Details</a>
+								</div>
 							</div>	
 						</div>
 					</div>
@@ -216,6 +228,9 @@
 							<div class="mask2">
 								<a><h4>Seminar by BSNL</h4></a>
 								<a class="info"><p>April 6, 2016</p></a>
+								<div style="text-align: center;">
+									<a class="btn btn-chos hvr-bounce-to-left info event-detail-popup" style="background-color:#2EADAB; min-width:20%; " href="eventPopUpPages/event7.html" title="View Details"> View Details</a>
+								</div>
 							</div>	
 						</div>
 					</div>
@@ -225,6 +240,9 @@
 							<div class="mask2">
 								<a><h4>Workshop on PHONEGAP by HCL</h4></a>
 								<a class="info"><p>April 5, 2016</p></a>
+								<div style="text-align: center;">
+									<a class="btn btn-chos hvr-bounce-to-left info event-detail-popup" style="background-color:#2EADAB; min-width:20%; " href="eventPopUpPages/event6.html" title="View Details"> View Details</a>
+								</div>
 							</div>	
 						</div>
 					</div>
@@ -234,6 +252,9 @@
 							<div class="mask2">
 								<a><h4>Code Quest</h4></a>
 								<a class="info"><p>March 3, 2016</p></a>
+								<div style="text-align: center;">
+									<a class="btn btn-chos hvr-bounce-to-left info event-detail-popup" style="background-color:#2EADAB; min-width:20%; " href="eventPopUpPages/event2.html" title="View Details"> View Details</a>
+								</div>
 							</div>	
 						</div>
 					</div>
@@ -243,6 +264,9 @@
 							<div class="mask2">
 								<a><h4>Beg, Borrow, Steal</h4></a>
 								<a class="info"><p>Februray 4, 2016</p></a>
+								<div style="text-align: center;">
+									<a class="btn btn-chos hvr-bounce-to-left info event-detail-popup" style="background-color:#2EADAB; min-width:20%; " href="eventPopUpPages/event3.html" title="View Details"> View Details</a>
+								</div>
 							</div>	
 						</div>
 					</div>
@@ -584,6 +608,15 @@
 <!-- Custom Scripts
 ========================================-->
 <script src="js/main.js"></script>
+
+<!--magnific-popup script-->
+<script src="js/magnific-popup/magnific-popup.js"></script>
+<!--magnific-popup intialisation-->
+<script>
+$(document).ready(function() {
+  $('.event-detail-popup').magnificPopup({type:'ajax'});
+});
+</script>
 
 </body>
 </html>
