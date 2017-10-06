@@ -172,6 +172,7 @@ if ($conn->connect_error) {
 <div class="slider-area">
 	<div class="bend niceties preview-2">
 		<div id="slider" class="slides">	<!-- slider image-->
+			<img src="images/slider/slide4.jpg" alt="image" title="#slider-direction-1"  />
 			<img src="images/slider/slide3.jpg" alt="image" title="#slider-direction-1"  />
 			<img src="images/slider/slide2.jpg" alt="image" title="#slider-direction-1"  />
 			<img src="images/slider/slide1.jpg" alt="image" title="#slider-direction-1"  />

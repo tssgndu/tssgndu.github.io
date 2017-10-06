@@ -39,7 +39,7 @@ CREATE TABLE `admin_db` (
 --
 
 INSERT INTO `admin_db` (`username`, `password`, `id`) VALUES
-('myadmin', 'myadmin789', 1);
+('myadmin', 'admin@123', 1);
 
 -- --------------------------------------------------------
 
@@ -116,6 +116,28 @@ CREATE TABLE `team_record` (
 
 INSERT INTO `team_record` (`id`, `name`, `post`, `image`, `fb_link`, `insta_link`, `linkedin`, `youtube`, `level`) VALUES
 (0, '', '', '', '0', '0', '0', '0', 0);
+
+INSERT INTO `team_record` (`id`, `name`, `post`, `image`, `fb_link`, `insta_link`, `linkedin`, `youtube`, `level`) VALUES
+(1, 'Hardeep Singh', 'President', 'admin/team/6.jpg', 'https://www.facebook.com/hardeep.singh.58118774', '', 'https://www.linkedin.com/in/hardeep-singh-7b5b6416/', '', 1),
+(3, 'Sukhsagar Singh', 'CONVENER', 'admin/team/sukhsagar.jpg', 'https://fb.com/sukhsagarsinghbatra', 'https://www.instagram.com/thealtruisticturbanator/', 'https://www.linkedin.com/in/sukhsagarsinghbatra/', '', 2),
+(4, 'Mahima Mujral', 'GENERAL MANAGER', 'admin/team/mahi.jpg', 'https://www.facebook.com/mahimamujral/', 'https://www.instagram.com/twinkling_stardust/', '', '', 3),
+(5, 'Ridhima Mehra', 'COMMUNITY BUILDER', 'admin/team/ridhima.jpeg', 'https://www.facebook.com/ridhima04', 'https://www.instagram.com/ridhima_mehra4', '', '', 4),
+(6, 'MANPREET KAUR', 'HEAD OF LITERARY CLUB', 'admin/team/mannie.jpg', 'https://www.facebook.com/profile.php?id=100003092463717', '', '', '', 5),
+(7, 'Lovepreet Kaur', 'HEAD OF Web-Dev CLUB', 'admin/team/loveprt.jpg', '', '', '', '', 6),
+(8, 'Pukhraj Singh', 'EVENT MANAGER', 'admin/team/pukhraj.jpeg', 'https://www.facebook.com/pukhraj.randhawa', '', '', '', 7),
+(9, 'Kriti Shah', 'Event Manager', 'admin/team/Kriti.jpeg', 'https://www.facebook.com/kriti.shah.359', '', '', '', 8),
+(10, 'Harsimar Bedi', 'Public Relations Manager', 'admin/team/harsimar.jpeg', 'https://www.facebook.com/harsimar.bedi?ref=br_rs', '', '', '', 9),
+(11, 'Yuvraj Singh', 'Head of Placement Committee', 'admin/team/yuvraj.jpeg', 'https://www.facebook.com/yuvisingh.cool', '', '', '', 10),
+(12, 'Tanvi Dhammi', 'Head of Cultural Club', 'admin/team/tanvi.jpeg', 'https://www.facebook.com/profile.php?id=100002724876434', '', '', '', 11),
+(13, 'Gurkiran Kaur', 'Head of Sports Club', 'admin/team/Gurkiran.jpeg', 'https://www.facebook.com/profile.php?id=100002177488295', '', '', '', 12),
+(14, 'Rahul Kumar', 'Head of Designing Club', 'admin/team/Rahul.jpeg', 'https://www.facebook.com/profile.php?id=100000757341317', '', '', '', 13),
+(15, 'Deepti Mehra', 'Notice Board Manager', 'admin/team/Deepti.jpeg', 'https://www.facebook.com/profile.php?id=100001002108841&', '', '', '', 14),
+(16, 'Nidhi', 'Notice Board Manager', 'admin/team/nnidhi.jpeg', '', '', '', '', 15),
+(17, 'Kishore Narang', 'Head of Programming Club', 'admin/team/Kishore.jpeg', 'https://www.facebook.com/profile.php?id=100003144444525', '', '', '', 16),
+(18, 'Aarti Sethi', 'Head of Academics Comittee', 'admin/team/Aarti.jpeg', 'https://www.facebook.com/profile.php?id=100001220924849', '', '', '', 17),
+(19, 'Harpreet Kaur', 'Head of Finance Committee', 'admin/team/Harpreet.jpeg', 'https://www.facebook.com/profile.php?id=100010337221213', '', '', '', 18),
+(20, 'Adeeshnoor Singh', 'Social Media Manager', 'admin/team/adeesh.jpg', 'https://www.facebook.com/profile.php?id=100001376850889', '', '', '', 19),
+(21, 'Vrinda Aggarwal', 'Head of Academics Comittee', 'admin/team/Vrinda.jpeg', 'https://www.facebook.com/vrinda.aggarwal.372', '', '', '', 20);
 
 --
 -- Indexes for dumped tables
