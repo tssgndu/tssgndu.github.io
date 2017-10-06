@@ -26,7 +26,7 @@ include 'common_bs_files.php';
 </head>
 
 
-<body style="background-image:url(bk8.jpg)">
+<body style="background-image:url(assets/bk8.jpg)">
 <?php
 
  include 'header.php';?>
@@ -34,7 +34,7 @@ include 'common_bs_files.php';
 	<div class="col-sm-12">
 		<div class="col-sm-1" ></div>
 <div class="col-sm-10" >
-<div class="row"  style="color:white; padding:1%;border:1px solid white;border-radius:2%">
+<div class="row"  style="background-image:url(assets/bg88.jpg);color:white; padding:1%;border:1px solid white;border-radius:2%">
 <div class="col-sm-12">
 			<form role="form" action="addteam.php" method="post" enctype="multipart/form-data"
 			class="form"> 

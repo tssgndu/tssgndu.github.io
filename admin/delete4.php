@@ -17,7 +17,7 @@ else
 	include 'connection.php';
 	include 'connection2.php';
 
-	$query3=mysqli_query($conn,"DELETE FROM techfest WHERE  id='$a' ");
+	$query3=mysqli_query($conn,"DELETE FROM events_record WHERE  id='$a' ");
  echo "<script language=\"JavaScript\">\n";
 				echo "alert(' Record Deleted. click ok to ensure');\n";
 				echo "window.location='delete_tfevent.php'";

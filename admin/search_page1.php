@@ -18,7 +18,7 @@ else
 
 <html>
 <head>
-<title>TSS</title>
+<title>Technical Students Society</title>
 
 <?php
  include 'common_bs_files.php';
@@ -31,7 +31,7 @@ else
 </head>	
 <script src="jquery.min.js"></script>
 
-<body style="background-image:url(bk88.png)">
+<body style="background-image:url(assets/bk88.png)">
 
 <?php
  include 'header.php'?>
@@ -94,7 +94,7 @@ $location1="admin/".$c."/".$name;
 	if($a1 )
 	{
 		echo "<center><h1 style='color:white'>Record Updated Successfully";
-	echo "<a href='demo_search.php' target='_blank' class='btn btn-danger' >Click Here</a></h1></center>";
+	echo "<a href='demo_search.php'  class='btn btn-danger' >Click Here</a></h1></center>";
 
 	}
 	else

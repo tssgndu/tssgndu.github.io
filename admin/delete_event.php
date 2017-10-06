@@ -27,12 +27,14 @@ tr:hover{
 	color:black;
 	
 }
-
+.tr1:hover{
+	color:black;
+}
 </style>
 </head>
 
 
-<body style="background-image:url(bk8.jpg)">
+<body style="background-image:url(assets/bk8.jpg)">
  <?php
  include 'header.php'?><br/>
   <div class="container" id="brdr"  style="border:1px solid white;border-radius:2%">
@@ -44,23 +46,24 @@ tr:hover{
 			   <div class="col-sm-12"  >
 			   
 			  <center> <h2 style="color:white"><u>Technical Events</u></h2> </center>
-		   	<center> <h3 style="color:red">	   warning:click on id , item will be deleted </h3> </center>
 
 	<?php	 include 'connection2.php';
 
 //LET'S INITIATE CONNECT TO DB
 
-$query3=mysqli_query($conn, "select * from technical_events  ");
+$query3=mysqli_query($conn, "select * from events_record");
 $query4=mysqli_fetch_array($query3);
 echo mysqli_error($conn);
 if($query4){
-$query1=mysqli_query($conn, "select * from technical_events ");
-echo "<table class='table table-hover' style='font-size:18px;color:white;background-image:url(bk88.png);border-radius:2%'><tr style='font-size:20px;color:white;font-family:times new roman' class='a'><th> ID</th><th> Name</th><th> Date</th></tr>";
+$query1=mysqli_query($conn, "select * from events_record where techflag='category-1' ORDER BY id DESC ");
+echo "<table class='table table-hover' style='font-size:18px;color:white;background-image:url(assets/bk88.png);border-radius:2%'><tr style='font-size:20px;font-family:times new roman' class='tr1'><th></th><th> </th><th> Name</th><th> Date</th><th> Image</th></tr>";
 while($query2=mysqli_fetch_array($query1))
 {
-echo "<tr><td><a href='delete1.php?id=".$query2['id']."'  >".$query2['id']."</a></td>";
-echo "<td>".$query2['tevent_name']."</td>";
-echo "<td>".$query2['tevent_date']."</td></tr>";
+echo "<tr><td><a href='delete1.php?id=".$query2['id']."'  class='btn btn-danger'>DELETE</a></td>";
+echo "<td><a href='update_tech.php?id=".$query2['id']."'  class='btn btn-primary'>UPDATE</a></td>";
+echo "<td>".$query2['name']."</td>";
+echo "<td>".$query2['day']."    ".$query2['month']."   ".$query2['year']."</td>";
+echo "<td><img src=".substr($query2['image'], 6)." width= '100px' height= '50px'  ></td></tr>";
 
 }
 

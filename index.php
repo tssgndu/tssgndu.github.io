@@ -172,7 +172,6 @@ if ($conn->connect_error) {
 <div class="slider-area">
 	<div class="bend niceties preview-2">
 		<div id="slider" class="slides">	<!-- slider image-->
-                        <img src="images/slider/slide4.jpg" alt="image" title="#slider-direction-1"  />
 			<img src="images/slider/slide3.jpg" alt="image" title="#slider-direction-1"  />
 			<img src="images/slider/slide2.jpg" alt="image" title="#slider-direction-1"  />
 			<img src="images/slider/slide1.jpg" alt="image" title="#slider-direction-1"  />
@@ -464,11 +463,11 @@ if ($conn->connect_error) {
 	                                 <div class="col-lg-8 col-lg-offset-2 col-sm-12 col-xs-12">
 	                                    <!-- pricing-box 3 -->
 	                                    <div class="pricing-box">
-	                                        <h3>Sports Club</h3>
+	                                        <h3>Designing Club</h3>
 	                                        <ul class="pricing-features">
-	                                        	<li>Regular Practice</li>
-												<li>Inter-Class Tournaments</li>
-												<li>Inter-Department Tournaments</li>
+	                                        	<li>Notice Board</li>
+	                                        	<li>Event Posters</li>
+												<li>Festival Decorations</li>
 											</ul><br>
 											<!-- <a class="btn btn-chos hvr-bounce-to-left" href="#" title="Buy Now">View Details</a> -->
 	                                    </div><!--/ pricing-box 3 -->
@@ -544,39 +543,11 @@ if ($conn->connect_error) {
 	                                 <div class="col-lg-8 col-lg-offset-2 col-sm-12 col-xs-12">
 	                                    <!-- pricing-box 3 -->
 	                                    <div class="pricing-box">
-	                                        <h3>Designing Committee</h3>
+	                                        <h3>Sports Committee</h3>
 	                                        <ul class="pricing-features">
-	                                        	<li>Notice Board</li>
-	                                        	<li>Event Posters</li>
-												<li>Festival Decorations</li>
-											</ul><br>
-											<!-- <a class="btn btn-chos hvr-bounce-to-left" href="#" title="Buy Now">View Details</a> -->
-	                                    </div><!--/ pricing-box 3 -->
-	                                </div>
-	                            </div>
-	                            <div class="item singCarousel">
-	                                 <div class="col-lg-8 col-lg-offset-2 col-sm-12 col-xs-12">
-	                                    <!-- pricing-box 3 -->
-	                                    <div class="pricing-box">
-	                                        <h3>Event Management Committee</h3>
-	                                        <ul class="pricing-features">
-	                                        	<li>Innovative event ideas</li>
-	                                        	<li>Manage Events</li>
-	                                        	<li>Organize workshops and seminars</li>
-											</ul><br>
-											<!-- <a class="btn btn-chos hvr-bounce-to-left" href="#" title="Buy Now">View Details</a> -->
-	                                    </div><!--/ pricing-box 3 -->
-	                                </div>
-	                            </div>
-	                            <div class="item singCarousel">
-	                                 <div class="col-lg-8 col-lg-offset-2 col-sm-12 col-xs-12">
-	                                    <!-- pricing-box 3 -->
-	                                    <div class="pricing-box">
-	                                        <h3>Marketing Committee</h3>
-	                                        <ul class="pricing-features">
-	                                        	<li>Social Media</li>
-	                                        	<li>Digital Marketing</li>
-	                                        	<li>SEO</li>
+	                                        	<li>Regular Practice</li>
+												<li>Inter-Class Tournaments</li>
+												<li>Inter-Department Tournaments</li>
 											</ul><br>
 											<!-- <a class="btn btn-chos hvr-bounce-to-left" href="#" title="Buy Now">View Details</a> -->
 	                                    </div><!--/ pricing-box 3 -->
@@ -627,7 +598,7 @@ if ($conn->connect_error) {
 			<div class="col-lg-6 col-sm-7 col-xs-12">
 				<div class="row">
 				<?php
-				$sql = "SELECT * FROM recent_events_record where id!='0' group by id DESC limit 0,3 ";
+				$sql = "SELECT * FROM events_record where id!='0' group by id DESC limit 0,3 ";
 	$result = $conn->query($sql);
 
 if ($result->num_rows >0) {
@@ -707,9 +678,9 @@ if ($result->num_rows >0) {
                             <h6><?php echo $row["name"];?></h6>
                             <p><?php echo $row["post"];?></p>
                             <ul class="social list-inline">
- 								<?php  if(!empty ($fb)){?>
+							<?php  if(!empty ($fb)){?>
                                 <li>                       
-                                    <a href="<?php echo $fb; ?>" title="Follow Me on Facebook"><i class="fa fa-facebook"></i></a>
+                                    <a href="<?php echo $fb; ?>" title="Follow Me on Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
                                 </li>
 							<?php }
 							if(!empty ($insta)){?>
@@ -740,7 +711,7 @@ if ($result->num_rows >0) {
 }
 else
 {
-	echo "<center><h1 style='color:white;background-image:url(bk88.png)'>No such record exists.. sorry :(</h1></center>";
+	echo "<center><h1 style='color:black;'>No such record exists.. sorry :(</h1></center>";
 }
 ?>
 		<!---/.row -->
@@ -792,7 +763,7 @@ else
 
 				<div class="col-md-4 col-sm-5 text-center">
 					<div class="footer-creadit">
-						<span class="theme_color">TSS</span> © 2016 All Right Reserved<br>Designed by: <a href="http://tssgndu.com/codewarriors/"><b>CODE WARRIORS</b></a>
+						<span class="theme_color">TSS</span> © 2016 All Right Reserved<br>Designed by: <a href="http://codewarriors.tssgndu.com"><b>CODE WARRIORS</b></a>
 					</div>
 				</div>
 				<!-- col-md-4 -->
@@ -816,6 +787,7 @@ else
 <!-- End:Footer Section 
 ========================================-->
 
+	
 <!-- Scripts
 ========================================-->
 <!-- jquery -->

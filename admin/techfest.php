@@ -24,7 +24,7 @@ include 'common_bs_files.php';
 </head>
 
 
-<body style="background-image:url(bk8.jpg)">
+<body style="background-image:url(assets/bk8.jpg)">
 <?php
 
  include 'header.php';?>
@@ -41,17 +41,28 @@ include 'common_bs_files.php';
     
 	<div class="form-group">
       <label for="id" class="td">Event Name</label>
-      <input type="text" class="form-control" name="name" id="id" placeholder="Enter Name"
+      <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name"
 	  style="width:300px;"  required>
     </div>
 	
     <div class="form-group"> 
 		<label for="id" class="td">Event Date</label>
-			   <input type="text" class="form-control" name="day" id="day"  placeholder="Enter Day"
-			   style="width:300px;"  > <br/>
-			   <input type="text" class="form-control" name="month" id="month"  placeholder="Enter Month"
-			   style="width:300px;" >  <br/>
-			   <input type="text" class="form-control" name="year" id="year"  placeholder="Enter Year"
+			   <input  type="text"  class="form-control" name="day" id="day"  placeholder="Enter Day"
+			   style="width:300px;"  required> <br/>
+			   		<?php $sql ="SELECT month from indextable where id!='13' order by id ASC ";
+  	$result = $conn->query($sql);
+    if ($result->num_rows >0) {
+		   ?>
+		   <select id="month" class="form-control" name="month" style="width:300px;color:gray;" placeholder="Select month">
+		           <option>----Select month---</option>
+	<?php while($row = $result->fetch_assoc()) {  ?>
+			<option><?php echo $row["month"];?></option>
+    <?php
+	   }
+	   }
+	?>
+	</select>  <br/>
+			   <input  type="text"  class="form-control" name="year" id="year"  placeholder="Enter Year"
 			   style="width:300px;"  required> 
 	</div>
 	
@@ -76,10 +87,8 @@ include 'common_bs_files.php';
      	 $month=$_POST['month'];
      	 $year=$_POST['year'];
 		 $flag='1';
-		 $sum='0';
-		 $id='0';
-		 $id2='0';
 		 $imgflag='0';
+		 $newindex='0';
 		 $name=$_FILES['file']['name'];
 		 $c="techfest_events";
 $extension=strtolower(substr($name,strpos($name,'.')+1));
@@ -93,15 +102,11 @@ if(isset($name))
 {
 	if(!empty($name))
 	{
-		if(($extension=='jpg' || $extension=='jpeg' || $extension=='png')&& ($type=='image/jpeg'|| $type=='image/png'))
-		{
 		$location=$c."/";
 		if(move_uploaded_file($tmp_name,$location.$name))
 		{
 		$imgflag=1;
 		}
-		}
-		
 	}
 }
 $location1="admin/".$c."/".$name;
@@ -111,43 +116,31 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-$query123=mysqli_query($conn,"INSERT INTO techfest(tfevent_name,tfevent_day, tfevent_month, tfevent_year, tfevent_pmplt)
-		        VALUES ('$a1','$day','$month','$year','$location1')");
-				
-$query1234=mysqli_query($conn,"INSERT INTO recent_events_record(name,day,month,year,image,flag)
-		        VALUES ('$a1','$day','$month','$year','$location1','$flag')");
-							
-							
-$sql = "SELECT * FROM recent_events_record order  by id desc";
-	$result = $conn->query($sql);
-
-if ($result->num_rows >0) {
-	// output data of each row
-	   
-      
-    while($row = $result->fetch_assoc()) {	
-	if(mysqli_affected_rows($conn) > 0){
 		
-		$sum= $row['flag'];
-		$sum++;
-		$id= $row['id'];
-		$id2= $id-4;
-	
-			$sql = "DELETE  FROM recent_events_record WHERE id <= '$id2'	";
-			$conn->query($sql);
-	}
-}
-}
-
-if($query123 && $query1234 && $imgflag)
-{
-	echo "<h1 style='color:white'>Image Uploaded Successfully</h1>";	
-	echo "<h1 style='color:white'>Record Added Successfully</h1>";
-} else {
-	echo "<h1 style='color:white'>Event NOT Added<br /></h1>";
-	echo mysqli_error ($conn);
-}
-	 }	 
+	$sql ="SELECT * from indextable where month='$month'";
+  	$result = $conn->query($sql);
+    if ($result->num_rows >0) 
+		{
+		   	while($row = $result->fetch_assoc()) 
+			{ 
+					$newindex= $row["id"];
+					
+					$query123 = mysqli_query($conn,"INSERT INTO events_record
+					(name, day,month,year, image,flag,newindex,techfestflag)
+						VALUES 
+					('$a1','$day','$month','$year','$location1','$flag','$newindex','category-4')");
+						
+					if($query123  && $imgflag)
+					{
+						echo "<h1 style='color:white'>Image Uploaded Successfully</h1>";	
+						echo "<h1 style='color:white'>Record Added Successfully</h1>";
+					} else {
+						echo "<h1 style='color:white'>Event NOT Added<br /></h1>";
+						echo mysqli_error ($conn);
+					}				
+			}
+		}				
+	}	 
 }
 ?>
 </div>

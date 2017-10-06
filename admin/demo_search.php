@@ -27,21 +27,29 @@ tr:hover{
 	color:black;
 	
 }
+.tr1:hover{
+		color:black;
+
+}
+td{
+	max-width:100px;
+	max-height:90px;
+	overflow:hidden;
+}
 
 </style>
 </head>
 
 
-<body style="background-image:url(bk8.jpg)">
+<body style="background-image:url(assets/bk8.jpg)">
  <?php
  include 'header.php'?><br/>
-  <div class="container" id="brdr"  style="border:1px solid white;border-radius:2%">
+   <div class="container" id="brdr"  style="border:1px solid white;border-radius:2%">
+
   <div class="row">
   <div class="col-sm-12"  >
-   </div>
-   </div><br/>
-	   <div class="row">
-			   <div class="col-sm-12"  >
+ 			  <center> <h2 style="color:white"><u>Search/Update Team</u></h2> </center>
+
 		   
 	<?php	 include 'connection2.php';
 
@@ -51,17 +59,24 @@ $query4=mysqli_fetch_array($query3);
 echo mysqli_error($conn);
 if($query4){
 $query1=mysqli_query($conn, "select * from team_record where id!=0 group by id ");
-echo "<table class='table table-hover' style='font-size:18px;color:white;background-image:url(bk88.png);border-radius:2%'><tr style='font-size:20px;color:white;font-family:times new roman' class='a'><th> ID</th><th> Name</th><th> Post</th><th>FB Link</th><th>Insta Link<th>Linkedin</th><th>Youtube</th><th>Level</th></tr>";
+echo "<table class='table table-hover ' style='font-size:18px;color:white;background-image:url(assets/bk88.png);border-radius:2%'><tr style='font-size:20px;font-family:times new roman' class='a' class='tr1'><th> </th><th> Name</th><th> Post</th><th>FB Link</th><th>Insta Link<th>Linkedin</th><th>Youtube</th><th>Level</th><th>Image</th></tr>";
 while($query2=mysqli_fetch_array($query1))
 {
-echo "<tr><td><a href='search_page.php?id=".$query2['id']."' target='_blank' >".$query2['id']."</a></td>";
+echo "<tr><td><a href='search_page.php?id=".$query2['id']."' target='_blank' class='btn btn-primary' >UPDATE</a></td>";
 echo "<td>".$query2['name']."</td>";
 echo "<td>".$query2['post']."</td>";
-echo "<td>".$query2['fb_link']."</td>";
-echo "<td>".$query2['insta_link']."</td>";
-echo "<td>".$query2['linkedin']."</td>";
-echo "<td>".$query2['youtube']."</td>";
-echo "<td>".$query2['level']."</td></tr>";
+echo "<td><a href=".$query2['fb_link']."  style='font-size:14px;'>".$query2['fb_link']."</a></td>";
+echo "<td><a href=".$query2['insta_link']."  target='_blank' style='font-size:14px;'>".$query2['insta_link']."</a></td>";
+echo "<td><a href=".$query2['linkedin']." target='_blank' style='font-size:14px;'>".$query2['linkedin']."</a></td>";
+echo "<td><a href=".$query2['youtube']." target='_blank' style='font-size:14px;'>".$query2['youtube']."</a></td>";
+echo "<td>".$query2['level']."</td>";
+echo "<td><img src=".substr($query2['image'], 6)." width= '100px' height= '100px'  ></td></tr>";
+
+?>
+
+
+<?php
+
 }
 
 }

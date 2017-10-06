@@ -3,7 +3,6 @@ $servername = "localhost";
 $username = "id2156308_tssgndu";
 $password = "tssgndu";
 $dbname = "id2156308_tss";
-
 // Create connection
 $conn = new mysqli($servername, $username, $password,$dbname);
 
@@ -113,7 +112,7 @@ if ($conn->connect_error) {
 				<span class="icon-bar"></span> 
 				<span class="icon-bar"></span>
 			</button> 
-			<a class="navbar-brand" href="index.php">
+			<a class="navbar-brand" href="home.php">
 				<!-- LOGO -->
 				<img alt="logo" src="images/logo.png" style="margin-top: -20px;">
 			</a>
@@ -121,22 +120,22 @@ if ($conn->connect_error) {
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-left">
                 <li>
-                    <a href="index.php#home">Home</a>
+                    <a href="home.php#home">Home</a>
                 </li>
                 <li>
-                    <a href="index.php#about">about</a>
+                    <a href="home.php#about">about</a>
                 </li>
                 <li>
-                    <a href="index.php#clubs">Clubs</a>
+                    <a href="home.php#clubs">Clubs</a>
                 </li>
 				<li>
                     <a href="#events">Events</a>
                 </li>
 				<li>
-                    <a href="index.php#team">team</a>
+                    <a href="home.php#team">team</a>
                 </li>
                 <li>
-                    <a href="index.php#contact">contact</a>
+                    <a href="home.php#contact">contact</a>
                 </li>
             </ul>
 			<div class="pull-right header-right text-right">
@@ -197,566 +196,103 @@ if ($conn->connect_error) {
 				<!-- Project Filter End-->
             </div>
         </div>
-        <div class="row">
+    
+				
+	    <div class="row">
 			<!-- col-lg-12 col-sm-6 -->
-            <div class="col-lg-12 col-sm-12">
-                <div class="project-list">
+            <div class="col-lg-12 col-sm-12">			
+				                <div class="project-list ">
+
 				<?php
-				$sql = "SELECT * FROM technical_events order by tevent_year desc";
+	
+			$sql = "SELECT * FROM events_record order by year DESC, year+newindex DESC, day DESC";
 	$result = $conn->query($sql);
 
 if ($result->num_rows >0) {
 	// output data of each row
 	   
       
-    while($row = $result->fetch_assoc()) {?>
-                	<div class="col-sm-5 col-lg-3 col-md-4 col-xs-8 mix category-2" data-myorder="1">
+    while($row = $result->fetch_assoc()) {
+					$newflag1=$row["techflag"];
+					$newflag2=$row["nontechflag"];
+					$newflag3=$row["semflag"];
+					$newflag4=$row["techfestflag"];
+			
+					if($newflag1=='category-1')
+					{?>
+	
+                	<div class="col-sm-5 col-lg-3 col-md-4 col-xs-8 mix category-2" >
 						<div class="work-item">
 							<div class="items"><img alt="" class="" 
-		src="<?php echo $row["tevent_pmplt"];?>"/></div>
-							<div class="mask2">
-								<a><h4><?php echo $row["tevent_name"];?></h4></a>
-								<a class="info"><p><?php echo $row["tevent_day"];?>  <?php echo $row["tevent_month"];?> ,  <?php echo $row["tevent_year"];?></p></a>
+								src="<?php echo $row["image"];?>"/></div>
+								<div class="mask2">
+								<a><h4><?php echo $row["name"];?></h4></a>
+								<a class="info"><p><?php echo $row["day"];?>  <?php echo $row["month"];?> ,  <?php echo $row["year"];?></p></a>
 							</div>	
 						</div>
 					</div>	
 					
-<?php
+					<?php
+					}
+					elseif($newflag2=='category-2')
+					{?>
 	
-	}
-} else {
-    echo "";
-}
-?>
-
-<?php
-				$sql = "SELECT * FROM nontech_events order by nevent_year desc";
-	$result = $conn->query($sql);
-
-if ($result->num_rows >0) {
-	// output data of each row
-	   
-      
-    while($row = $result->fetch_assoc()) {?>			
-       	<div class="col-sm-5 col-lg-3 col-md-4 col-xs-8 mix category-1" data-myorder="1">
+                	<div class="col-sm-5 col-lg-3 col-md-4 col-xs-8 mix category-1" >
 						<div class="work-item">
 							<div class="items"><img alt="" class="" 
-		src="<?php echo $row["nevent_pmplt"];?>"/></div>
-							<div class="mask2">
-								<a><h4><?php echo $row["nevent_name"];?></h4></a>
-								<a class="info"><p><?php echo $row["nevent_day"]; ?> <?php echo $row["nevent_month"];  ?> ,<?php echo $row["nevent_year"];?></p></a>
-							</div>	
-						</div>
-					</div>
-<?php
-	
-	}
-} else {
-    echo "";
-}
-?>
-						
-<?php
-				$sql = "SELECT * FROM seminor_events order by sevent_year desc";
-	$result = $conn->query($sql);
-
-if ($result->num_rows >0) {
-	// output data of each row
-    while($row = $result->fetch_assoc()) {?>
-                	<div class="col-sm-5 col-lg-3 col-md-4 col-xs-8 mix category-3" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" 
-		src="<?php echo $row["seventt_pmplt"];?>"/></div>
-							<div class="mask2">
-								<a><h4><?php echo $row["sevent_name"];?></h4></a>
-								<a class="info"><p><?php echo $row["sevent_day"];?>  <?php echo $row["sevent_month"];?> ,  <?php echo $row["sevent_year"];?></p></a>
-							</div>	
-						</div>
-					</div>	
-<?php
-	}
-} else {
-    echo "";
-}
-?>
-<?php
-				$sql = "SELECT * FROM techfest order by tfevent_year desc";
-	$result = $conn->query($sql);
-
-if ($result->num_rows >0) {
-	// output data of each row
-	   
-      
-    while($row = $result->fetch_assoc()) {?>
-                	<div class="col-sm-5 col-lg-3 col-md-4 col-xs-8 mix category-4" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" 
-		src="<?php echo $row["tfevent_pmplt"];?>"/></div>
-							<div class="mask2">
-								<a><h4><?php echo $row["tfevent_name"];?></h4></a>
-								<a class="info"><p><?php echo $row["tfevent_day"];?>  <?php echo $row["tfevent_month"];?> , <?php echo $row["tfevent_year"];?></p></a>
+								src="<?php echo $row["image"];?>"/></div>
+								<div class="mask2">
+								<a><h4><?php echo $row["name"];?></h4></a>
+								<a class="info"><p><?php echo $row["day"];?>  <?php echo $row["month"];?> ,  <?php echo $row["year"];?></p></a>
 							</div>	
 						</div>
 					</div>	
 					
-<?php
+					<?php
+					} 
+					elseif($newflag3=='category-3')
+					{?>
 	
-	}
-} else {
-    echo "";
-}
-?>
+                	<div class="col-sm-5 col-lg-3 col-md-4 col-xs-8 mix category-3" >
+						<div class="work-item">
+							<div class="items"><img alt="" class="" 
+								src="<?php echo $row["image"];?>"/></div>
+								<div class="mask2">
+								<a><h4><?php echo $row["name"];?></h4></a>
+								<a class="info"><p><?php echo $row["day"];?>  <?php echo $row["month"];?> ,  <?php echo $row["year"];?></p></a>
+							</div>	
+						</div>
+					</div>	
+					
+					<?php
+					} 
+					elseif($newflag4=='category-4')
+					{?>
+	
+                	<div class="col-sm-5 col-lg-3 col-md-4 col-xs-8 mix category-4" >
+						<div class="work-item">
+							<div class="items"><img alt="" class="" 
+								src="<?php echo $row["image"];?>"/></div>
+								<div class="mask2">
+								<a><h4><?php echo $row["name"];?></h4></a>
+								<a class="info"><p><?php echo $row["day"];?>  <?php echo $row["month"];?> ,  <?php echo $row["year"];?></p></a>
+							</div>	
+						</div>
+					</div>	
+					
+					<?php
+					}
+	
+			}
+		}	
+	?>
+
 					<!--/ End: Work Item 8 -->
 				</div><!--/project-list --> 
             </div>
 			<!--/.col-lg-12 col-sm-6-->
         </div>
-
 		<!--/.row-->
-<div class="row">
-			<!-- col-lg-12 col-sm-6 -->
-            <div class="col-lg-12 col-sm-12">
-                <div class="project-list">
-                	<div class="col-lg-3 col-sm-3 col-xs-12 mix category-2" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-46.jpg"></div>
-							<div class="mask2">
-								<a><h4>FARRAGO C</h4></a>
-								<a class="info"><p>January 25, 2017</p></a>
-							</div>	
-						</div>
-					</div>
-                	<div class="col-lg-3 col-sm-3 col-xs-12 mix category-2" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-45.jpg"></div>
-							<div class="mask2">
-								<a><h4>CODE WAR - II</h4></a>
-								<a class="info"><p>December 24, 2016</p></a>
-							</div>	
-						</div>
-					</div>
-                	<div class="col-lg-3 col-sm-3 col-xs-12 mix category-1" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-44.jpg"></div>
-							<div class="mask2">
-								<a><h4>Literati 2k16</h4></a>
-								<a class="info"><p>November 03, 2016</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-3" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-43.jpg"></div>
-							<div class="mask2">
-								<a><h4>Seminar on data analytics (valuerhr)</h4></a>
-								<a class="info"><p>October 26, 2016</p></a>
-							</div>	
-						</div>
-					</div>
-                	<div class="col-lg-3 col-sm-3 col-xs-12 mix category-3" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-42.jpg"></div>
-							<div class="mask2">
-								<a><h4>FLASH CLASSES on C</h4></a>
-								<a class="info"><p>September, 2016 - November, 2016</p></a>
-							</div>	
-						</div>
-					</div>
-                	<div class="col-lg-3 col-sm-3 col-xs-12 mix category-3" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-41.jpg"></div>
-							<div class="mask2">
-								<a><h4>Seminar on CYBER SECURITY</h4></a>
-								<a class="info"><p>September 28, 2016</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-2" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-40.jpg"></div>
-							<div class="mask2">
-								<a><h4>CODE WAR - I</h4></a>
-								<a class="info"><p>September 24, 2016</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-1" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-39.jpg"></div>
-							<div class="mask2">
-								<a><h4>RUN 4 FUN</h4></a>
-								<a class="info"><p>September 21, 2016</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-3" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-38.jpg"></div>
-							<div class="mask2">
-								<a><h4>INTRODUCTORY Seminar for First Year Students</h4></a>
-								<a class="info"><p>September 20, 2016</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-3" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-37.jpg"></div>
-							<div class="mask2">
-								<a><h4>Seminar by GATE LEADERS</h4></a>
-								<a class="info"><p>September 20, 2016</p></a>
-							</div>	
-						</div>
-					</div>
-                	<div class="col-lg-3 col-sm-3 col-xs-12 mix category-3" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-36.jpg"></div>
-							<div class="mask2">
-								<a><h4>Seminar on CAMPUS PLACEMENTS</h4></a>
-								<a class="info"><p>August 24, 2016</p></a>
-							</div>	
-						</div>
-					</div>			
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-1" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-35.jpg"></div>
-							<div class="mask2">
-								<a><h4>The Shuttlers</h4></a>
-								<a class="info"><p>August 23, 2016</p></a>
-							</div>	
-						</div>
-					</div>	
-                	<div class="col-lg-3 col-sm-3 col-xs-12 mix category-3" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-1.jpg"></div>
-							<div class="mask2">
-								<a><h4>Seminar on Ethical hacking</h4></a>
-								<a class="info"><p>April 18, 2016</p></a>
-								<div style="text-align: center;">
-									<a class="btn btn-chos hvr-bounce-to-left info event-detail-popup" style="background-color:#2EADAB; min-width:20%; " href="eventPopUpPages/event1.html" title="View Details"> View Details</a>
-								</div>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-3" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-5.jpg"></div>
-							<div class="mask2">
-								<a><h4>Workshop by Netmax</h4></a>
-								<a class="info"><p>April 8, 2016</p></a>
-								<div style="text-align: center;">
-									<a class="btn btn-chos hvr-bounce-to-left info event-detail-popup" style="background-color:#2EADAB; min-width:20%; " href="eventPopUpPages/event5.html" title="View Details"> View Details</a>
-								</div>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-1" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-8.jpg"></div>
-							<div class="mask2">
-								<a><h4>Donate Blood, Save Lives</h4></a>
-								<a class="info"><p>April 7, 2016</p></a>
-								<div style="text-align: center;">
-									<a class="btn btn-chos hvr-bounce-to-left info event-detail-popup" style="background-color:#2EADAB; min-width:20%; " href="eventPopUpPages/event8.html" title="View Details"> View Details</a>
-								</div>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-3" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-7.jpg"></div>
-							<div class="mask2">
-								<a><h4>Seminar by BSNL</h4></a>
-								<a class="info"><p>April 6, 2016</p></a>
-								<div style="text-align: center;">
-									<a class="btn btn-chos hvr-bounce-to-left info event-detail-popup" style="background-color:#2EADAB; min-width:20%; " href="eventPopUpPages/event7.html" title="View Details"> View Details</a>
-								</div>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-3" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-6.jpg"></div>
-							<div class="mask2">
-								<a><h4>Workshop on PHONEGAP by HCL</h4></a>
-								<a class="info"><p>April 5, 2016</p></a>
-								<div style="text-align: center;">
-									<a class="btn btn-chos hvr-bounce-to-left info event-detail-popup" style="background-color:#2EADAB; min-width:20%; " href="eventPopUpPages/event6.html" title="View Details"> View Details</a>
-								</div>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-2" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-2.jpg"></div>
-							<div class="mask2">
-								<a><h4>Code Quest</h4></a>
-								<a class="info"><p>March 3, 2016</p></a>
-								<div style="text-align: center;">
-									<a class="btn btn-chos hvr-bounce-to-left info event-detail-popup" style="background-color:#2EADAB; min-width:20%; " href="eventPopUpPages/event2.html" title="View Details"> View Details</a>
-								</div>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-1" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-3.jpg"></div>
-							<div class="mask2">
-								<a><h4>Beg, Borrow, Steal</h4></a>
-								<a class="info"><p>Februray 4, 2016</p></a>
-								<div style="text-align: center;">
-									<a class="btn btn-chos hvr-bounce-to-left info event-detail-popup" style="background-color:#2EADAB; min-width:20%; " href="eventPopUpPages/event3.html" title="View Details"> View Details</a>
-								</div>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-2" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-9.jpg"></div>
-							<div class="mask2">
-								<a><h4>QUIZ by TECHIES</h4></a>
-								<a class="info"><p>February 3, 2016</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-4" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-4.jpg"></div>
-							<div class="mask2">
-								<a><h4>IRIS' 15</h4></a>
-								<a class="info"><p>2015</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-2" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-11.jpg"></div>
-							<div class="mask2">
-								<a><h4>From Inside The Room</h4></a>
-								<a class="info"><p>2015</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-2" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-10.jpg"></div>
-							<div class="mask2">
-								<a><h4>Competetive Exam Challenge (IBT)</h4></a>
-								<a class="info"><p>April 15&16, 2015</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-3" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-19.jpg"></div>
-							<div class="mask2">
-								<a><h4>Flash Classes on Data Analytics</h4></a>
-								<a class="info"><p>April, 2015</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-2" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-21.jpg"></div>
-							<div class="mask2">
-								<a><h4>Mock Placement Drive</h4></a>
-								<a class="info"><p>March 2-4, 2015</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-2" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-22.jpg"></div>
-							<div class="mask2">
-								<a><h4>Mock Placements (TIMES)</h4></a>
-								<a class="info"><p>February 3, 2015</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-2" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-20.jpg"></div>
-							<div class="mask2">
-								<a><h4>INSOMIA (Tri Series)</h4></a>
-								<a class="info"><p>March, 2015</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-1" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-23.jpg"></div>
-							<div class="mask2">
-								<a><h4>Spell Bee</h4></a>
-								<a class="info"><p>October 7-8, 2014</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-2" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-12.jpg"></div>
-							<div class="mask2">
-								<a><h4>Code Overnight</h4></a>
-								<a class="info"><p>September 27, 2014</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-2" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-13.jpg"></div>
-							<div class="mask2">
-								<a><h4>Polish HTML,Css Skills</h4></a>
-								<a class="info"><p>September 16, 2014</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-4" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-18.jpg"></div>
-							<div class="mask2">
-								<a><h4>IRIS' 13</h4></a>
-								<a class="info"><p>2013</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-1" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-17.jpg"></div>
-							<div class="mask2">
-								<a><h4>Battlefield</h4></a>
-								<a class="info"><p>October 11, 2012</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-2" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-15.jpg"></div>
-							<div class="mask2">
-								<a><h4>Loopscope</h4></a>
-								<a class="info"><p>October 11, 2012</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-3" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-14.jpg"></div>
-							<div class="mask2">
-								<a><h4>Workshop on HTML</h4></a>
-								<a class="info"><p>April 10-11, 2012</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-4" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-24.jpg"></div>
-							<div class="mask2">
-								<a><h4>TECHNOID' 12</h4></a>
-								<a class="info"><p>2012</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-4" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-26.jpg"></div>
-							<div class="mask2">
-								<a><h4>UTPANN' 12</h4></a>
-								<a class="info"><p>2012</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-3" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-27.jpg"></div>
-							<div class="mask2">
-								<a><h4>Loophole</h4></a>
-								<a class="info"><p>August 31 - September 1, 2012</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-4" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-15.jpg"></div>
-							<div class="mask2">
-								<a><h4>IGNIS' 11</h4></a>
-								<a class="info"><p>2011</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-1" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-28.jpg"></div>
-							<div class="mask2">
-								<a><h4>Roadies</h4></a>
-								<a class="info"><p>April 10-15, 2011</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-3" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-29.jpg"></div>
-							<div class="mask2">
-								<a><h4>Demystifying Numbers</h4></a>
-								<a class="info"><p>March, 2011</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-1" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-30.jpg"></div>
-							<div class="mask2">
-								<a><h4>Rebuttal</h4></a>
-								<a class="info"><p>March 8, 2011</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-1" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-31.jpg"></div>
-							<div class="mask2">
-								<a><h4>Miami Ink</h4></a>
-								<a class="info"><p>March 8, 2011</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-2" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-32.jpg"></div>
-							<div class="mask2">
-								<a><h4>Code Hunt</h4></a>
-								<a class="info"><p>March 8, 2011</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-4" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-16.jpg"></div>
-							<div class="mask2">
-								<a><h4>UTPANN' 11</h4></a>
-								<a class="info"><p>2011</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-3" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-34.jpg"></div>
-							<div class="mask2">
-								<a><h4>Flash Classes on C Language</h4></a>
-								<a class="info"><p>February 15, 2011</p></a>
-							</div>	
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-12 mix category-3" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" src="images/work/work-33.jpg"></div>
-							<div class="mask2">
-								<a><h4>Workshop on Microsoft Exchange Server</h4></a>
-								<a class="info"><p>February 7-12, 2011</p></a>
-							</div>	
-						</div>
-					</div>
-					<!--/ End: Work Item 8 -->
-				</div><!--/project-list --> 
-            </div>
-			<!--/.col-lg-12 col-sm-6-->
-        </div>
     </div>
     <div style="text-align: center; margin-top: 40px; ">
 		<a class="btn btn-chos hvr-bounce-to-left" style="background-color:#2EADAB; min-width:20%; " href="home.php#events" title="Go Back"><b>GO BACK</b></a>
@@ -789,7 +325,7 @@ if ($result->num_rows >0) {
 
 				<div class="col-md-4 col-sm-5 text-center">
 					<div class="footer-creadit">
-						<span class="theme_color">TSS</span> © 2016 All Right Reserved<br>Designed by: <a href="http://tssgndu.com/codewarriors/"><b>CODE WARRIORS</b></a>
+						<span class="theme_color">TSS</span> © 2016 All Right Reserved<br>Designed by: <a href="http://codewarriors.tssgndu.com"><b>CODE WARRIORS</b></a>
 					</div>
 				</div>
 				<!-- col-md-4 -->
@@ -828,9 +364,8 @@ if ($result->num_rows >0) {
 <script src="js/wow.min.js"></script>
 
 <!-- Use For Map -->
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
  <!-- Use For Map -->
- <script src="js/maps.js"></script>
+ <!--<script src="js/maps.js"></script>
 <!-- Use For carousel -->
 <script src="js/owl.carousel.min.js"></script>
 <!-- Use For mixitup gallery -->

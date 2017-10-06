@@ -18,7 +18,7 @@ else
 
 <html>
 <head>
-<title>Search And Update Team</title>
+<title>Technical Students Society</title>
 
 <?php
  include 'common_bs_files.php';
@@ -32,7 +32,7 @@ else
 </head>	
 <script src="jquery.min.js"></script>
 
-<body style="background-image:url(bk88.png)">
+<body style="background-image:url(assets/bk88.png)">
 
 <?php
 
@@ -68,11 +68,11 @@ else
 		name="name" placeholder="Enter Name"value="<?php echo $q?>" id="td2" ><br/></p>
 </div>
 <div class="col-sm-2">
-         	<input type="text" class="form-control" name="post" value="<?php echo $r ;?>" id="td2" ><br/></p>
+         	<input type="text" class="form-control" name="post" value="<?php echo $r ;?>"  placeholder="post"  ><br/></p>
  
 </div>
 <div class="col-sm-2">
-         	<input type="text" class="form-control" name="fb"  id="td2" value="<?php echo $s ?>" placeholder="fb link"><br/></p>
+         	<input type="text" class="form-control" name="fb"   value="<?php echo $s ?>" placeholder="fb link"><br/></p>
 
 </div>   
 <div class="col-sm-2">

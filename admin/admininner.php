@@ -124,7 +124,7 @@ include 'common_bs_files.php';
 </style>
 </head>
 
-<body style="background-image:url(bk8.jpg)">
+<body style="background-image:url(assets/bk8.jpg)">
 
 <?php
 include 'header.php';
@@ -137,7 +137,7 @@ include 'header.php';
 <div class="col-sm-12">
 <div class="col-sm-3">
     <div class="hovereffect">
-        <img class="img-responsive" id="img" src="bk1.jpg" alt="">
+        <img class="img-responsive" id="img" src="assets/bk1.jpg" alt="">
         <div class="overlay">
             <h2 style="color:white;">Add Technical Events</h2>
             <a class="info" href="techInner.php">GO</a>
@@ -146,7 +146,7 @@ include 'header.php';
 </div>
 <div class="col-sm-3">
     <div class="hovereffect">
-        <img class="img-responsive" id="img" src="bk5.jpg" alt="">
+        <img class="img-responsive" id="img" src="assets/bk5.jpg" alt="">
         <div class="overlay">
             <h2>Add Non-Technical Events</h2>
             <a class="info" href="nontechInner.php">GO</a>
@@ -156,7 +156,7 @@ include 'header.php';
 
 <div class="col-sm-3">
     <div class="hovereffect">
-        <img class="img-responsive" id="img" src="bk4.jpg" alt="">
+        <img class="img-responsive" id="img" src="assets/bk4.jpg" alt="">
         <div class="overlay">
 		            <h2>Add Tech Fest Events</h2>
             <a class="info" href="techfest.php">GO</a>
@@ -166,7 +166,7 @@ include 'header.php';
 
 <div class="col-sm-3">
     <div class="hovereffect">
-        <img class="img-responsive" id="img" src="bk3.jpg" alt="">
+        <img class="img-responsive" id="img" src="assets/bk3.jpg" alt="">
         <div class="overlay">
 		            <h2>Add Seminor And Flash Classes</h2>
             <a class="info" href="seminorInner.php">GO</a>
@@ -178,7 +178,7 @@ include 'header.php';
 <br/>
 <div class="col-sm-3">
     <div class="hovereffect">
-        <img class="img-responsive" id="img" src="team.jpg" alt="">
+        <img class="img-responsive" id="img" src="assets/team.jpg" alt="">
         <div class="overlay">
 		            <h2>Add Team</h2>
             <a class="info" href="addteam.php">GO</a>
@@ -187,7 +187,7 @@ include 'header.php';
 </div>
 <div class="col-sm-3">
     <div class="hovereffect">
-        <img class="img-responsive" id="img" src="stm.jpg" alt="">
+        <img class="img-responsive" id="img" src="assets/stm.jpg" alt="">
         <div class="overlay">
 		            <h2>Search/Update Team</h2>
             <a class="info" href="demo_search.php">GO</a>
@@ -196,7 +196,7 @@ include 'header.php';
 </div>
 <div class="col-sm-3">
     <div class="hovereffect">
-        <img class="img-responsive" id="img" src="dl1.png" alt="">
+        <img class="img-responsive" id="img" src="assets/dl1.png" alt="">
         <div class="overlay">
 		            <h2>Delete Team</h2>
             <a class="info" href="delete_display.php">GO</a>
@@ -205,9 +205,9 @@ include 'header.php';
 </div>
 <div class="col-sm-3">
     <div class="hovereffect">
-        <img class="img-responsive" id="img" src="dl.png" alt="">
+        <img class="img-responsive" id="img" src="assets/dl.png" alt="">
         <div class="overlay">
-		            <h2>Delete Event</h2>
+		            <h2>Delete Technical Event</h2>
             <a class="info" href="delete_event.php">GO</a>
         </div>
     </div>

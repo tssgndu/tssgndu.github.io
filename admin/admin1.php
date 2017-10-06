@@ -26,7 +26,7 @@ if ($conn->connect_error) {
 <link rel="stylesheet" href="css/bootstrap.css">
 
 <!-- Optional theme -->
-<link rel="stylesheet" href="admin.css">
+<link rel="stylesheet" href="css/admin.css">
 <!-- Latest compiled and minified JavaScript -->
 <script src="js/bootstrap.min.js">
 </script>
@@ -138,7 +138,7 @@ $(document).ready(function(){
 </script-->
 	</head>
 
-<body style="background-image:url(images.jpg)">
+<body style="background-image:url(assets/images.jpg)">
 <div class="container">
 <div class="row">
 <div class="col-sm-4" style="box-shadow: 10px 10px 5px #e5e5e5;padding-bottom:3%;border-radius:3%">

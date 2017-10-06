@@ -1,4 +1,4 @@
-/* Table of Content
+ /* Table of Content
 ==================================================
 1. Global styles
 2. Header Section
@@ -1351,7 +1351,7 @@ color: #fff;
 
 .member {
   position: relative;
-  padding: 30px 10px;
+  padding: 0px 10px;
 }
 
 .member .img {
@@ -1359,8 +1359,8 @@ color: #fff;
 }
 
 .member .img img {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: auto;
   padding: 20px;
   border: 1px solid #EAEAEA;
 }

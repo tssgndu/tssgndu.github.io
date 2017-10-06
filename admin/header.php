@@ -38,10 +38,10 @@ $p=$_SESSION["password"];
 <?php
 ?>
   <div class="container-fluid">
-  <div class="row" id="back"  style="background-image:url(bk88.png);">
+  <div class="row" id="back"  style="background-image:url(assets/bk88.png);">
   <div class="col-sm-1">
 
-       <a href="admininner.php" class="a2"><img src="logo.png" style="margin-top:10%;border-radius:10%;"></a>
+       <a href="admininner.php" class="a2"><img src="assets/logo.png" style="margin-top:10%;border-radius:10%;"></a>
 
    
   </div>
@@ -61,7 +61,7 @@ $p=$_SESSION["password"];
   <div class="col-sm-2">
   <div class="col-sm-6"></div>
   <div class="col-sm-6" >
-     <a href="logout2.php"><img src="lg1.jpg"></a>
+     <a href="logout2.php"><img src="assets/lg.png" style="margin-top:10%;border-radius:10%;"></a>
 </div>
 </div>
 </div>
@@ -91,19 +91,24 @@ $p=$_SESSION["password"];
      <li><a href="delete_display.php">Delete Team Member</a></li>
 	 </ul>
 </li>
-   <li class="dropdown"><a class="dropdown-toggle" id="a1" data-toggle="dropdown" href="#">Delete Event
+   <li class="dropdown"><a class="dropdown-toggle" id="a1" data-toggle="dropdown" href="#">Delete/Update Event
    <span class="caret"></span></a>
         <ul class="dropdown-menu">
 		
-     <li><a href="delete_event.php">Delete Technical Event</a></li>
-     <li><a href="delete_ntevent.php">Delete Non-Technical Event</a></li>
-     <li><a href="delete_sevent.php">Delete Seminor Event</a></li>
-     <li><a href="delete_tfevent.php">Delete Tech Fest Event</a></li>
+     <li><a href="delete_event.php">Delete/Update Technical Event</a></li>
+     <li><a href="delete_ntevent.php">Delete/Update Non-Technical Event</a></li>
+     <li><a href="delete_sevent.php">Delete/Update Seminor Event</a></li>
+     <li><a href="delete_tfevent.php">Delete/Update Tech Fest Event</a></li>
 	 </ul>
 </li>
+  
+
 
    </ul>
    </ul>
+   
+      
+
    </div>
    <div class="col-sm-1"></div>
    

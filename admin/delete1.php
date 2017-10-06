@@ -13,11 +13,11 @@ if($u==null || $p==null)
 else
 {
 	$a=$_GET['id'];
-
+	echo $name;
 	include 'connection.php';
 	include 'connection2.php';
 
-	$query3=mysqli_query($conn,"DELETE FROM technical_events WHERE  id='$a' ");
+	$query3=mysqli_query($conn,"DELETE FROM events_record WHERE  id='$a' ");
  echo "<script language=\"JavaScript\">\n";
 				echo "alert(' Record Deleted. click ok to ensure');\n";
 				echo "window.location='delete_event.php'";
