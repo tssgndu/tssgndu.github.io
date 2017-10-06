@@ -197,121 +197,101 @@ if ($conn->connect_error) {
 				<!-- Project Filter End-->
             </div>
         </div>
-        <div class="row">
+        		
+	    <div class="row">
 			<!-- col-lg-12 col-sm-6 -->
-            <div class="col-lg-12 col-sm-12">
-                <div class="project-list">
+            <div class="col-lg-12 col-sm-12">			
+				                <div class="project-list ">
+
 				<?php
-				$sql = "SELECT * FROM technical_events order by tevent_year desc";
+	
+			$sql = "SELECT * FROM events_record order by year DESC, year+newindex DESC, day DESC";
 	$result = $conn->query($sql);
 
 if ($result->num_rows >0) {
 	// output data of each row
 	   
       
-    while($row = $result->fetch_assoc()) {?>
-                	<div class="col-sm-5 col-lg-3 col-md-4 col-xs-8 mix category-2" data-myorder="1">
+    while($row = $result->fetch_assoc()) {
+					$newflag1=$row["techflag"];
+					$newflag2=$row["nontechflag"];
+					$newflag3=$row["semflag"];
+					$newflag4=$row["techfestflag"];
+			
+					if($newflag1=='category-1')
+					{?>
+	
+                	<div class="col-sm-5 col-lg-3 col-md-4 col-xs-8 mix category-2" >
 						<div class="work-item">
 							<div class="items"><img alt="" class="" 
-		src="<?php echo $row["tevent_pmplt"];?>"/></div>
-							<div class="mask2">
-								<a><h4><?php echo $row["tevent_name"];?></h4></a>
-								<a class="info"><p><?php echo $row["tevent_day"];?>  <?php echo $row["tevent_month"];?> ,  <?php echo $row["tevent_year"];?></p></a>
+								src="<?php echo $row["image"];?>"/></div>
+								<div class="mask2">
+								<a><h4><?php echo $row["name"];?></h4></a>
+								<a class="info"><p><?php echo $row["day"];?>  <?php echo $row["month"];?> ,  <?php echo $row["year"];?></p></a>
 							</div>	
 						</div>
 					</div>	
 					
-<?php
+					<?php
+					}
+					elseif($newflag2=='category-2')
+					{?>
 	
-	}
-} else {
-    echo "";
-}
-?>
-
-<?php
-				$sql = "SELECT * FROM nontech_events order by nevent_year desc";
-	$result = $conn->query($sql);
-
-if ($result->num_rows >0) {
-	// output data of each row
-	   
-      
-    while($row = $result->fetch_assoc()) {?>			
-       	<div class="col-sm-5 col-lg-3 col-md-4 col-xs-8 mix category-1" data-myorder="1">
+                	<div class="col-sm-5 col-lg-3 col-md-4 col-xs-8 mix category-1" >
 						<div class="work-item">
 							<div class="items"><img alt="" class="" 
-		src="<?php echo $row["nevent_pmplt"];?>"/></div>
-							<div class="mask2">
-								<a><h4><?php echo $row["nevent_name"];?></h4></a>
-								<a class="info"><p><?php echo $row["nevent_day"]; ?> <?php echo $row["nevent_month"];  ?> ,<?php echo $row["nevent_year"];?></p></a>
-							</div>	
-						</div>
-					</div>
-<?php
-	
-	}
-} else {
-    echo "";
-}
-?>
-						
-<?php
-				$sql = "SELECT * FROM seminor_events order by sevent_year desc";
-	$result = $conn->query($sql);
-
-if ($result->num_rows >0) {
-	// output data of each row
-    while($row = $result->fetch_assoc()) {?>
-                	<div class="col-sm-5 col-lg-3 col-md-4 col-xs-8 mix category-3" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" 
-		src="<?php echo $row["seventt_pmplt"];?>"/></div>
-							<div class="mask2">
-								<a><h4><?php echo $row["sevent_name"];?></h4></a>
-								<a class="info"><p><?php echo $row["sevent_day"];?>  <?php echo $row["sevent_month"];?> ,  <?php echo $row["sevent_year"];?></p></a>
-							</div>	
-						</div>
-					</div>	
-<?php
-	}
-} else {
-    echo "";
-}
-?>
-<?php
-				$sql = "SELECT * FROM techfest order by tfevent_year desc";
-	$result = $conn->query($sql);
-
-if ($result->num_rows >0) {
-	// output data of each row
-	   
-      
-    while($row = $result->fetch_assoc()) {?>
-                	<div class="col-sm-5 col-lg-3 col-md-4 col-xs-8 mix category-4" data-myorder="1">
-						<div class="work-item">
-							<div class="items"><img alt="" class="" 
-		src="<?php echo $row["tfevent_pmplt"];?>"/></div>
-							<div class="mask2">
-								<a><h4><?php echo $row["tfevent_name"];?></h4></a>
-								<a class="info"><p><?php echo $row["tfevent_day"];?>  <?php echo $row["tfevent_month"];?> , <?php echo $row["tfevent_year"];?></p></a>
+								src="<?php echo $row["image"];?>"/></div>
+								<div class="mask2">
+								<a><h4><?php echo $row["name"];?></h4></a>
+								<a class="info"><p><?php echo $row["day"];?>  <?php echo $row["month"];?> ,  <?php echo $row["year"];?></p></a>
 							</div>	
 						</div>
 					</div>	
 					
-<?php
+					<?php
+					} 
+					elseif($newflag3=='category-3')
+					{?>
 	
-	}
-} else {
-    echo "";
-}
-?>
+                	<div class="col-sm-5 col-lg-3 col-md-4 col-xs-8 mix category-3" >
+						<div class="work-item">
+							<div class="items"><img alt="" class="" 
+								src="<?php echo $row["image"];?>"/></div>
+								<div class="mask2">
+								<a><h4><?php echo $row["name"];?></h4></a>
+								<a class="info"><p><?php echo $row["day"];?>  <?php echo $row["month"];?> ,  <?php echo $row["year"];?></p></a>
+							</div>	
+						</div>
+					</div>	
+					
+					<?php
+					} 
+					elseif($newflag4=='category-4')
+					{?>
+	
+                	<div class="col-sm-5 col-lg-3 col-md-4 col-xs-8 mix category-4" >
+						<div class="work-item">
+							<div class="items"><img alt="" class="" 
+								src="<?php echo $row["image"];?>"/></div>
+								<div class="mask2">
+								<a><h4><?php echo $row["name"];?></h4></a>
+								<a class="info"><p><?php echo $row["day"];?>  <?php echo $row["month"];?> ,  <?php echo $row["year"];?></p></a>
+							</div>	
+						</div>
+					</div>	
+					
+					<?php
+					}
+	
+			}
+		}	
+	?>
+
 					<!--/ End: Work Item 8 -->
 				</div><!--/project-list --> 
             </div>
 			<!--/.col-lg-12 col-sm-6-->
         </div>
-
 		<!--/.row-->
 <div class="row">
 			<!-- col-lg-12 col-sm-6 -->
