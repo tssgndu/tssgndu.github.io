@@ -1,0 +1,145 @@
+
+
+#head {
+    width:1354px;height:7%;background: #DC4A43;margin-top: 0px;position:static;box-shadow:2px 2px 6px #aaa;
+}
+body {
+    margin:auto;margin-left:auto;margin-right:auto;height: 800px;width: 100%;
+}
+h1 {
+    font-size: 155%;margin-top: 60px;font-family: sans-serif;color:#494949;margin-left: 38%;margin-right: 30%;text-shadow: 2px 3px 3px #ddd;float:left;
+}
+fieldset {
+    width: 44%;;height: 45%;margin-left: 3.5%;margin-top: 4%;float:left;border-radius:7px;margin-right: auto;box-shadow:1px 1px 5px 5px #eee;border:1px solid #ccc;
+}
+
+h2 {
+    font-size: 20px;color:#DC4A43;font-family: verdana;margin-right:15px; margin-left: 15px;text-shadow: 2px 3px 3px #ddd;
+}
+#contact {
+    width: 42%;height: 340px;margin-left: 3.5%;margin-top: 51px;float:left;
+}
+h3 {
+     font-size: 20px;color:#DC4A43;font-family: verdana;margin-right:15px; margin-left: 15px;text-shadow: 2px 3px 3px #ddd;
+}
+label {
+    font-size: 17px;color:#494940;margin-left: 4.5%;font-family: sans-serif;text-shadow:2px 3px 3px #eee;
+}
+#blood {
+    margin-top: 6px;width: 230px;height: 30px;border-radius: 5px;margin-left: 4.5%;border: 1px solid #bbb;float:left;background: #F5F5F5;font-family: verdana;overflow:auto;color:#494940;
+    
+}
+#for {
+    background:#FAF4F5;width: 260px;height: 70px;float:left;margin-top: 25px
+}
+#ant {
+    
+       background:#FAF4F5;width: 230px;height: 70px;float:left;margin-left: 7.5%;margin-top: 25px;
+        
+}
+#name:focus {
+    background: snow;border:1px solid lightblue;transition: all 0.6s;
+}
+hr {
+    margin-left: 11%;margin-right: 11%;margin-top: 150px;border-top:1px solid #ccc ;box-shadow: 1px 1px #bbb;
+}
+#gen {
+    font-size: 18px;color:#494940;margin-left: 1px;font-family: sans-serif;text-shadow:2px 3px 3px #eee;
+}
+.gender {
+    font-size: 19px;color:#898888;font-family: verdana;
+}
+
+#radio {
+    margin-top: 10px;width: 16px;height: 16px;;border: 1px solid #aaa;
+    
+}
+.select {font-family:verdana;width: 230px;height: 40px;
+}
+
+#time {
+    background: #FAF4F5;width: 230px;height: 65px;float:left;margin-top: 23px;margin-left: 10px;
+}
+#day {
+    margin-left: 2px;float:left;font-size: 17px;
+}
+#date {
+    margin-top: 6px;width: 230px;height: 30px;border-radius: 5px;margin-left: 1px;border: 1px solid #bbb;float:left;background: #F5F5F5;font-family: verdana;font-size: 13px;color:#494940;
+        
+}
+#reason {
+    background: #FAF4F5;width: 290px;height: 65px;float:left;margin-top: 27px;margin-left: 10px;
+}
+
+#weight {
+      background: #FAF4F5;width: 230px;height: 70px;float:left;margin-left: 8%;margin-top: 25px;
+        
+}
+#wet {
+    margin-left: 1px;float:left;font-size: 17px;
+}
+#wait {
+     margin-top: 4px;width: 230px;height: 28px;border-radius: 5px;margin-left: 0.1%;border: 1px solid #bbb;float:left;background: #F5F5F5;font-family: verdana;font-size: 15px;color:#494942;
+     
+}
+#wait:focus {
+    background: snow;border:1px solid lightblue;transition:all 1.2s;
+}
+#don {
+    margin-left: 1px;float:left;
+}
+#donate {
+     margin-top: 6px;width: 235px;height: 30px;border-radius: 5px;margin-left: 1px;border: 1px solid #bbb;float:left;background: #F5F5F5;font-family: verdana;overflow:auto;color:#494940;
+   
+}
+
+#submit {
+    margin-top: 55px;width: 200px;height: 60px;background: #DC4A43;border: none; border-radius: 50px;color: white;font-size: 29px;font-family: sans-serif;margin-left:43.8%;margin-right: 42%;
+
+}
+#submit:hover {
+    background: #F07868;box-shadow:1px 1px 8px 3px #ccc;transition:all 0.7s;
+}
+#name {
+    background: #FAF4F5;width: 250px;height: 56px;margin-left: 9px;margin-top: 22px;float:left;
+}
+#names {
+    margin-top: 5px;width: 240px;height: 28px;border-radius: 5px;margin-left: 0.1%;border: 1px solid #bbb;float:left;background: #F5F5F5;font-family: verdana;font-size: 15px;color:#494942;
+}
+#yourname {
+    margin-left: 0px;
+}
+#names:focus {
+    background: snow;border:1px solid lightblue;transition:all 1.2s;
+}
+#dept {
+    background: #FAF4F5;width: 240px;height: 56px;margin-left:5.5%;float:left;margin-top: 22px;
+}
+#d {
+    margin-top: 5px;width: 243px;height: 33px;border-radius: 5px;margin-left: 0.1%;border: 1px solid #bbb;float:left;background: #F5F5F5;font-family: verdana;overflow:auto;color:#494940;
+    
+}
+#dep {
+    margin-left: 0px;
+}
+#cont {
+    background:  #FAF4F5;float:left;width: 250px;height: 60px;margin-top: 39px;margin-left: 9px;
+}
+#phone {
+    margin-top: 0px;
+}
+#contac {
+    margin-top: 5px;width: 243px;height: 29px;border-radius: 5px;margin-left: 0.1%;border: 1px solid #bbb;float:left;background: #F5F5F5;font-family: verdana;overflow:auto;color:#494940;
+}
+#phone {
+    margin-left: 0px;
+}
+#contac:focus {
+        background: snow;border:1px solid lightblue;transition:all 1.2s;
+ 
+}
+:required {
+    background:red;border:1px solid red;color:red;
+    
+}
+}
