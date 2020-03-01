@@ -3,122 +3,122 @@
 ========================================================================== */
 
 .navbar-nav > li > a.current {
-    color: #009f9c;
+    color: #322D81;
 }
 .top-nav-collapse .navbar-nav > li > a.current {
-    color: #009f9c;
+    color: #322D81;
 }
 .top-nav-collapse .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:hover, .top-nav-collapse .navbar-nav > li > a.current:focus {
-    color: #009f9c;
+    color: #322D81;
 }
 .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
-    color: #009f9c;
+    color: #322D81;
 }
 .flipper h1 {
-    color: #009f9c;
+    color: #322D81;
 }
 .ban1_txt h3 {
-  color: #009f9c;
+  color: #322D81;
 }
 .header .carousel-indicators li {
-    border: 1px solid #009f9c;
+    border: 1px solid #322D81;
 }
 .carousel-control .glyphicon {
-  color: #009f9c;
+  color: #322D81;
 }
 .btn {
-	background: #009F9C;
+	background: #322D81;
 }
 .ban1_txt .btn-cus_1:hover {
-    background: #009F9C !important;
+    background: #322D81 !important;
     border: 1px solid RGBA(0, 159, 156, 0.95);
 }
 .preview-2 .nivo-directionNav a.nivo-prevNav::before {
-    background: #009F9C;
+    background: #322D81;
 }
 .preview-2 .nivo-directionNav a.nivo-nextNav::before {
-    background: #009F9C;
+    background: #322D81;
 }
 .slider-area .big-title span.title-builder {
-    color: #009F9C;
+    color: #322D81;
 }
 .btn-success:focus, .btn-success.active, .btn-success:active, .open > .dropdown-toggle.btn-success {
     color: #fff;
-    background-color:#009f9c;
-    border-color: 1px solid #009f9c;
+    background-color:#322D81;
+    border-color: 1px solid #322D81;
 }
 
 
 
 .about-ssection .row .about-item:hover .icon-fea::before {
-    color: #009F9C;
+    color: #322D81;
 }
 .about-ssection .row .about-item:hover .fea-left {
-    color: #009F9C;
+    color: #322D81;
 }
 .feat-learn:hover {
-    color: #009f9c;
+    color: #322D81;
 }
 .section-header:hover.section-header h2{
-    border-left: 4px solid #009f9c;
+    border-left: 4px solid #322D81;
 }
 .section-header h2 small {
-  color: #009f9c;
+  color: #322D81;
 }
 
 
 
 .otherDesc ul li:hover .ico {
-    border: 1px solid #009f9c;
-    color: #009f9c;
+    border: 1px solid #322D81;
+    color: #322D81;
 }
 
 
 .project-filter ul li.active {
-    color: #009f9c;
-    border-bottom: 2px solid #009f9c;
+    color: #322D81;
+    border-bottom: 2px solid #322D81;
 }
 .project-filter ul li:hover {
-  color: #009f9c;
+  color: #322D81;
 }
 .project_menu .hvr-underline-from-center::before {
-    background: #009f9c;
+    background: #322D81;
 }
 .mask2 p {
-    color: #009f9c;
+    color: #322D81;
 }
 .mask2 i {
-    color: #009f9c;
+    color: #322D81;
 }
 
 
 .member:hover .info {
-    background: #009f9c;
+    background: #322D81;
 }
 
 
 
 .clientCont a {
-    background: #009f9c;
+    background: #322D81;
 }
 .testimonial-box span {
-    color: #009F9C;
+    color: #322D81;
 }
 .testimonial-box p::before {
-  color: #009F9C;
+  color: #322D81;
 }
 .pricing-section .owl-theme .owl-controls .owl-page.active span {
-    background: #009F9C;
+    background: #322D81;
 }
 
 
 .date-sty {
-    color: #009f9c;
+    color: #322D81;
 }
 
 
 .contact-form #contact-form #submit-contact, .contact-form #comment-form #submit-contact, .comment-form #contact-form #submit-contact, .comment-form #comment-form #submit-contact {
-	background: #009f9c;
+	background: #322D81;
 }
 
 
